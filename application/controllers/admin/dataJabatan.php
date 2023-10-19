@@ -46,9 +46,7 @@ class dataJabatan extends CI_Controller
 
             $this->penggajianModel->insert_data($data, 'data_jabatan');
             $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
-            <strong>Data berhasil ditambahkan !</strong> 
-            
-          </div>');
+            <strong>Data berhasil ditambahkan !</strong> </div>');
             redirect('admin/dataJabatan');
         }
     }

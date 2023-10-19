@@ -7,7 +7,7 @@
         <ul style="background-color: #186F65;" class="navbar-nav  sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url('admin/dashboard') ?>">
                 <div class="sidebar-brand-icon">
                     <i><img src="<?= base_url('assets/img/echostar.png') ?>" style="width: 70px;" alt="logo echostar"></i>
                 </div>
