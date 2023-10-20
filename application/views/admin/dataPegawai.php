@@ -22,7 +22,8 @@
             <th class="text-center">Photo</th>
             <th class="text-center">Action</th>
         </tr>
-        <?php $no=1; foreach ($pegawai as $p) :?>
+        <?php $no=1; 
+        foreach ($pegawai as $p) :?>
             <tr>
                 <td class="text-center" ><?= $no++ ?></td>
                 <td class="text-center" ><?= $p->nik ?></td>

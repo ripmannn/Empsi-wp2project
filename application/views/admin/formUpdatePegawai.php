@@ -13,7 +13,7 @@
 
                 <div class="form-group">
                     <label for="nik">NIK</label>
-                    <input type="hidden" name="nik" id="nik" class="form-control" value="<?php echo $p->id_pegawai ?>">
+                    <input type="hidden" name="id_pegawai" id="id_pegawai" class="form-control" value="<?php echo $p->id_pegawai ?>">
                     <input type="number" name="nik" id="nik" class="form-control" value="<?php echo $p->nik ?>">
                     <?= form_error('nik', '<div class="text-small text-danger" >', '</div>') ?>
                 </div>
@@ -21,7 +21,7 @@
 
                 <div class="form-group">
                     <label for="nama_pegawai">Nama Pegawai</label>
-                    <input type="text" name="nama_pegawai" id="nama_pegawai" class="form-control"value="<?php echo $p->nama_pegawai ?>">
+                    <input type="text" name="nama_pegawai" id="nama_pegawai" class="form-control" value="<?php echo $p->nama_pegawai ?>">
                     <?= form_error('nama_pegawai', '<div class="text-small text-danger" >', '</div>') ?>
                 </div>
 
@@ -69,7 +69,11 @@
                 </div>
 
                 <button type="submit" class="btn btn-primary" >Simpan</button>
-
             </form>
             <?php endforeach; ?>
         </div>
+    </div>
+
+</div>
+
+</div>

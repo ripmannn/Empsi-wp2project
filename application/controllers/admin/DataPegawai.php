@@ -1,6 +1,7 @@
 <?php
 
-class dataPegawai extends CI_controller{
+class dataPegawai extends CI_controller
+{
     public function index()
     {
         $data['title'] = "Data Pegawai";
@@ -30,8 +31,7 @@ class dataPegawai extends CI_controller{
         $this->form_validation->set_rules('jabatan', 'Jabatan', 'required');
         $this->form_validation->set_rules('status', 'Status', 'required');
 
-        if ($this->form_validation->run() == FALSE) 
-        {
+        if ($this->form_validation->run() == FALSE) {
             $this->tambahData();
         } else {
             $nik= $this->input->post('nik');
@@ -73,10 +73,10 @@ class dataPegawai extends CI_controller{
     public function updateData ($id)
     {
         $where = array ('id_pegawai' => $id );
-        $data['title'] = "Update Data Pegawai";
-        $data['title'] = "Tambah Data Pegawai";
+        $data['title'] = 'Update Data Pegawai';
         $data['jabatan'] = $this->penggajianModel->get_data('data_jabatan')->result();
-        $data['pegawai'] = $this->db->query("SELECT * FROM data_pegawai WHERE id_pegawai='$id'")->result();
+        $data['pegawai'] = $this->db->query("SELECT * FROM data_pegawai WHERE id_pegawai='$id'")
+        ->result();
         $this->load->view('templates_admin/header', $data);
         $this->load->view('templates_admin/sidebar');
         $this->load->view('admin/formUpdatePegawai', $data);
@@ -93,7 +93,7 @@ class dataPegawai extends CI_controller{
         $this->form_validation->set_rules('status', 'Status', 'required');
     
         if ($this->form_validation->run() == FALSE) {
-            $id = $this->input->post('id');
+            $id= $this->input->post('id_pegawai');
             $this->updateData($id);
         } else {
             $id= $this->input->post('id_pegawai');
@@ -123,8 +123,9 @@ class dataPegawai extends CI_controller{
                 'jabatan' => $jabatan,
                 'tanggal_masuk' => $tanggal_masuk,
                 'status' => $status,
-               
             );
+               
+           
 
             $where = array(
                 'id_pegawai' => $id
