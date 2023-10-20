@@ -28,7 +28,7 @@
             <tr>
                 <td class="text-center"><?= $no++ ?></td>
                 <td class="text-center"><?= $j->nama_jabatan ?></td>
-                <td class="text-center">Rp.<?= number_format($j->gaji_pokok, 0, ',', '.')  ?></td>
+                <td class="text-center">Rp.<?= number_format($j->gaji_pokok,0,',','.')  ?></td>
                 <td class="text-center">Rp.<?= number_format($j->tj_transport, 0, ',', '.')  ?></td>
                 <td class="text-center">Rp.<?= number_format($j->uang_makan, 0, ',', '.')  ?></td>
                 <td class="text-center">Rp.<?= number_format($j->gaji_pokok + $j->tj_transport +
