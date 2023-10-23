@@ -70,7 +70,8 @@
     $jml_data = count($absensi);
     if ($jml_data > 0) { ?>
 
-        <table class="table table-bordered table-striped">
+        <?= $this->session->flashdata('pesan') ?>
+        <table class="table table-bordered table-striped mt-2">
             <tr>
                 <td class="text-center">No</td>
                 <td class="text-center">NIK</td>
@@ -101,3 +102,6 @@
     <?php } else { ?>
         <span class="badge badge-danger"><i class="fas fa-info-circle">Data Masih Kosong, silahkan input data kehadiran pada bulan dan tahun yang anda pilih.</i></span>
     <?php } ?>
+
+    </div>
+    </div>

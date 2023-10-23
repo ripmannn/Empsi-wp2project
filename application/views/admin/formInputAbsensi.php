@@ -42,7 +42,7 @@
                 </div>
 
 
-                <button type=" submit" class="btn btn-primary mb-2 ml-auto"><i class="fas fa-eye"></i>Generate</button>
+                <button type=" submit" class="btn btn-primary mb-2 ml-auto"><i class="fas fa-eye"></i> Generate</button>
             </form>
 
         </div>
@@ -65,39 +65,47 @@
     </div>
 
     <form method="POST">
-        <button class="btn btn-success mb-3" type="submit" name="submit" value="submit">Simpan</button>
-        <table class="table table-bordered table-striped">
-            <tr>
-                <td class="text-center">No</td>
-                <td class="text-center">NIK</td>
-                <td class="text-center">Nama Pegawai</td>
-                <td class="text-center">Jenis Kelamin</td>
-                <td class="text-center">Jabatan</td>
-                <td class="text-center" width="8%">Hadir</td>
-                <td class="text-center" width="8%">Sakit</td>
-                <td class="text-center" width="8%">Alpha</td>
-            </tr>
-
-            <?php $no = 1;
-            foreach ($input_absensi as $a) : ?>
+        <button class="btn btn-success mb-3" type="submit" name="submit" value="submit">Simpan</button> <br>
+        <?php
+        $jml_data = count($input_absensi);
+        if ($jml_data > 0) { ?>
+            <table class="table table-bordered table-striped mt-2">
                 <tr>
-                    <input type="hidden" name="bulan[]" class="form-control" value="<?php echo $bulantahun ?>">
-                    <input type="hidden" name="nik[]" class="form-control" value="<?php echo $a->nik ?>">
-                    <input type="hidden" name="nama_pegawai[]" class="form-control" value="<?php echo $a->nama_pegawai ?>">
-                    <input type="hidden" name="jenis_kelamin[]" class="form-control" value="<?php echo $a->jenis_kelamin ?>">
-                    <input type="hidden" name="nama_jabatan[]" class="form-control" value="<?php echo $a->nama_jabatan ?>">
-
-                    <td><?php echo $no++ ?></td>
-                    <td><?php echo $a->nik ?></td>
-                    <td><?php echo $a->nama_pegawai ?></td>
-                    <td><?php echo $a->jenis_kelamin ?></td>
-                    <td><?php echo $a->nama_jabatan ?></td>
-                    <td><input type="number" name="hadir[]" class="form-control" value="0"></td>
-                    <td><input type="number" name="sakit[]" class="form-control" value="0"></td>
-                    <td><input type="number" name="alpha[]" class="form-control" value="0"></td>
+                    <td class="text-center">No</td>
+                    <td class="text-center">NIK</td>
+                    <td class="text-center">Nama Pegawai</td>
+                    <td class="text-center">Jenis Kelamin</td>
+                    <td class="text-center">Jabatan</td>
+                    <td class="text-center" width="8%">Hadir</td>
+                    <td class="text-center" width="8%">Sakit</td>
+                    <td class="text-center" width="8%">Alpha</td>
                 </tr>
-            <?php endforeach; ?>
 
-        </table><br><br><br><br>
+                <?php $no = 1;
+                foreach ($input_absensi as $a) : ?>
+                    <tr>
+                        <input type="hidden" name="bulan[]" class="form-control" value="<?php echo $bulantahun ?>">
+                        <input type="hidden" name="nik[]" class="form-control" value="<?php echo $a->nik ?>">
+                        <input type="hidden" name="nama_pegawai[]" class="form-control" value="<?php echo $a->nama_pegawai ?>">
+                        <input type="hidden" name="jenis_kelamin[]" class="form-control" value="<?php echo $a->jenis_kelamin ?>">
+                        <input type="hidden" name="nama_jabatan[]" class="form-control" value="<?php echo $a->nama_jabatan ?>">
+
+                        <td><?php echo $no++ ?></td>
+                        <td><?php echo $a->nik ?></td>
+                        <td><?php echo $a->nama_pegawai ?></td>
+                        <td><?php echo $a->jenis_kelamin ?></td>
+                        <td><?php echo $a->nama_jabatan ?></td>
+                        <td><input type="number" name="hadir[]" class="form-control" value="0"></td>
+                        <td><input type="number" name="sakit[]" class="form-control" value="0"></td>
+                        <td><input type="number" name="alpha[]" class="form-control" value="0"></td>
+                    </tr>
+                <?php endforeach; ?>
+
+            </table>
     </form>
+<?php } else { ?>
+    <span class="badge badge-danger">
+        <i class="fas fa-info-circle"> Data sudah terisi, silahkan input data kehadiran pada bulan dan tahun yang belum terisi </i></span>
+<?php } ?>
+</div>
 </div>
