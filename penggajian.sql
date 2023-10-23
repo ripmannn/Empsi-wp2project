@@ -45,7 +45,7 @@ CREATE TABLE `data_kehadiran` (
   `id_kehadiran` int(11) NOT NULL,
   `bulan` varchar(15) NOT NULL,
   `nik` varchar(50) NOT NULL,
-  `nama_karyawan` varchar(225) NOT NULL,
+  `nama_pegawai` varchar(225) NOT NULL,
   `jenis_kelamin` varchar(50) NOT NULL,
   `nama_jabatan` varchar(50) NOT NULL,
   `hadir` int(11) NOT NULL,
@@ -66,7 +66,7 @@ CREATE TABLE `data_pegawai` (
   `jenis_kelamin` varchar(20) NOT NULL,
   `jabatan` varchar(50) NOT NULL,
   `tanggal_masuk` date NOT NULL,
-  `status` varchar(10) NOT NULL,
+  `status` varchar(50) NOT NULL,
   `photo` varchar(225) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
