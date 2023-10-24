@@ -11,7 +11,7 @@
                 <div class="sidebar-brand-icon">
                     <i><img src="<?= base_url('assets/img/echostar.png') ?>" style="width: 70px;" alt="logo echostar"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">#Echo<span style="color: skyblue;" >star</span></div>
+                <div class="sidebar-brand-text mx-3">#Echo<span style="color: skyblue;">star</span></div>
             </a>
 
             <!-- Divider -->
@@ -47,6 +47,7 @@
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="<?= base_url('admin/dataAbsensi') ?>">Data Absensi</a>
+                        <a class="collapse-item" href="<?= base_url('admin/potonganGaji') ?>">Setting Potongan Gaji</a>
                         <a class="collapse-item" href="<?= base_url('admin/dataPenggajian') ?>">Data Gaji</a>
                     </div>
                 </div>
@@ -86,7 +87,7 @@
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
 
-            
+
 
         </ul>
         <!-- End of Sidebar -->
