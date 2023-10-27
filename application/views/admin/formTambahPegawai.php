@@ -53,7 +53,7 @@
                 <div class="form-group">
                     <label for="status">Pilih Status</label>
                     <select name="status" id="status" class="form-control"> 
-                        <option value="">status</option>
+                        <option value="">---Pilih status---</option>
                         <option value="Pegawai Tetap">Pegawai Tetap</option>
                         <option value="Pegawai Tidak Tetap">Pegawai Tidak Tetap</option>
                     </select>
