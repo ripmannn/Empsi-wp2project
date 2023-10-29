@@ -26,6 +26,18 @@
                 </div>
 
                 <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username" class="form-control" value="<?php echo $p->username ?>">
+                    <?= form_error('username', '<div class="text-small text-danger" >', '</div>') ?>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" class="form-control" value="<?php echo $p->password ?>">
+                    <?= form_error('password', '<div class="text-small text-danger" >', '</div>') ?>
+                </div>
+
+                <div class="form-group">
                     <label for="jenis_kelamin">Jenis Kelamin</label>
                     <select name="jenis_kelamin" id="jenis_kelamin" class="form-control"> 
                         <option value="<?php echo $p->jenis_kelamin ?>"><?php echo $p->jenis_kelamin ?></option>
@@ -66,6 +78,22 @@
                     <label>Photo</label>
                     <input type="file" name="photo" class="form-control">
                     <?= form_error('photo', '<div class="text-small text-danger" >', '</div>') ?>
+                </div>
+
+                <div class="form-group">
+                    <label>Hak Akses</label>
+                    <select name="hak_akses" class="form-control">
+                        <option value="<?php echo $p->hak_akses?>">
+                        <?php if ($p->hak_akses=="1"){
+                            echo "Admin";
+                        }else{
+                            echo"pegawai";
+                        }?>
+                        </option>
+                        <option value="1">Admin</option>
+                        <option value="2">Pegawai</option>
+                    </select>
+                    <?= form_error('hak_akses', '<div class="text-small text-danger" >', '</div>') ?>
                 </div>
 
                 <button type="submit" class="btn btn-primary" >Simpan</button>

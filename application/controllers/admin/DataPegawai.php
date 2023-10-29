@@ -26,6 +26,8 @@ class dataPegawai extends CI_controller
     {
         $this->form_validation->set_rules('nik', 'NIK', 'required');
         $this->form_validation->set_rules('nama_pegawai', 'Nama Pegawai', 'required');
+        $this->form_validation->set_rules('username', 'Username', 'required');
+        $this->form_validation->set_rules('passsword', 'Password', 'required');
         $this->form_validation->set_rules('jenis_kelamin', 'Jenis Kelamin', 'required');
         $this->form_validation->set_rules('tanggal_masuk', 'Tanggal Masuk', 'required');
         $this->form_validation->set_rules('jabatan', 'Jabatan', 'required');
@@ -40,6 +42,9 @@ class dataPegawai extends CI_controller
             $jabatan= $this->input->post('jabatan');
             $tanggal_masuk= $this->input->post('tanggal_masuk');
             $status= $this->input->post('status');
+            $hak_akses= $this->input->post('hak_akses');
+            $username= $this->input->post('username');
+            $password= md5($this->input->post('password'));
             $photo= $_FILES['photo']['name'];
             if($photo = ''){} else {
                 $config['upload_path'] = './assets/photo';
@@ -60,6 +65,9 @@ class dataPegawai extends CI_controller
                 'jabatan' => $jabatan,
                 'tanggal_masuk' => $tanggal_masuk,
                 'status' => $status,
+                'hak_akses' => $hak_akses,
+                'username' => $username,
+                'password' => $password,
                 'photo' => $photo,
             );
 
@@ -87,6 +95,8 @@ class dataPegawai extends CI_controller
     {
         $this->form_validation->set_rules('nik', 'NIK', 'required');
         $this->form_validation->set_rules('nama_pegawai', 'Nama Pegawai', 'required');
+        $this->form_validation->set_rules('username', 'Username', 'required');
+        $this->form_validation->set_rules('passsword', 'Password', 'required');
         $this->form_validation->set_rules('jenis_kelamin', 'Jenis Kelamin', 'required');
         $this->form_validation->set_rules('tanggal_masuk', 'Tanggal Masuk', 'required');
         $this->form_validation->set_rules('jabatan', 'Jabatan', 'required');
@@ -103,6 +113,9 @@ class dataPegawai extends CI_controller
             $jabatan= $this->input->post('jabatan');
             $tanggal_masuk= $this->input->post('tanggal_masuk');
             $status= $this->input->post('status');
+            $hak_akses= $this->input->post('hak_akses');
+            $username= $this->input->post('username');
+            $password= md5($this->input->post('password'));
             $photo= $_FILES['photo']['name'];
             if ($photo) {
                 $config['upload_path'] = './assets/photo';
@@ -123,6 +136,9 @@ class dataPegawai extends CI_controller
                 'jabatan' => $jabatan,
                 'tanggal_masuk' => $tanggal_masuk,
                 'status' => $status,
+                'hak_akses' => $hak_akses,
+                'username' => $username,
+                'password' => $password,
             );
                
            

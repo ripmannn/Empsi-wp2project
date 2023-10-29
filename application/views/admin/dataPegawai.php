@@ -1,5 +1,5 @@
 <!-- Begin Page Content -->
-<div class="container-fluid">
+<div class="container-fluid" style="margin-bottom: 100px">
 
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
@@ -20,6 +20,7 @@
             <th class="text-center">Tanggal Masuk</th>
             <th class="text-center">Status</th>
             <th class="text-center">Photo</th>
+            <th class="text-center">Hak Akses</th>
             <th class="text-center">Action</th>
         </tr>
         <?php $no=1; 
@@ -33,6 +34,11 @@
                 <td class="text-center" ><?= $p->tanggal_masuk ?></td>
                 <td class="text-center" ><?= $p->status ?></td>
                 <td class="text-center" ><img style="width: 100px;" src="<?= base_url('assets/photo/'). $p->photo ?>" alt=""></td>
+                    <?php if ($p->hak_akses=='1'){?>
+                        <td>Admin</td>
+                    <?php }else{?>
+                        <td>Pegawai</td>
+                    <?php } ?>
                 <td>
                     <center>
                         <a class=" btn btn-sm btn-primary" href="<?= base_url('admin/dataPegawai/updateData/' . $p->id_pegawai) ?>">
