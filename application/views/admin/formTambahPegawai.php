@@ -31,7 +31,7 @@
 
                 <div class="form-group">
                     <label for="password">Password</label>
-                    <input type="password" name="pass" id="password" class="form-control">
+                    <input type="password" name="password" id="password" class="form-control">
                     <?= form_error('password', '<div class="text-small text-danger" >', '</div>') ?>
                 </div>
 

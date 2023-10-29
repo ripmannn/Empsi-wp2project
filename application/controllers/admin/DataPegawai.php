@@ -27,7 +27,7 @@ class dataPegawai extends CI_controller
         $this->form_validation->set_rules('nik', 'NIK', 'required');
         $this->form_validation->set_rules('nama_pegawai', 'Nama Pegawai', 'required');
         $this->form_validation->set_rules('username', 'Username', 'required');
-        $this->form_validation->set_rules('passsword', 'Password', 'required');
+        $this->form_validation->set_rules('password', 'Password', 'required');
         $this->form_validation->set_rules('jenis_kelamin', 'Jenis Kelamin', 'required');
         $this->form_validation->set_rules('tanggal_masuk', 'Tanggal Masuk', 'required');
         $this->form_validation->set_rules('jabatan', 'Jabatan', 'required');
@@ -38,13 +38,14 @@ class dataPegawai extends CI_controller
         } else {
             $nik= $this->input->post('nik');
             $nama_pegawai= $this->input->post('nama_pegawai');
+            $username= $this->input->post('username');
+            $password= md5($this->input->post('password'));
             $jenis_kelamin= $this->input->post('jenis_kelamin');
             $jabatan= $this->input->post('jabatan');
             $tanggal_masuk= $this->input->post('tanggal_masuk');
             $status= $this->input->post('status');
             $hak_akses= $this->input->post('hak_akses');
-            $username= $this->input->post('username');
-            $password= md5($this->input->post('password'));
+            
             $photo= $_FILES['photo']['name'];
             if($photo = ''){} else {
                 $config['upload_path'] = './assets/photo';
@@ -61,13 +62,13 @@ class dataPegawai extends CI_controller
             $data = array(
                 'nik' => $nik,
                 'nama_pegawai' => $nama_pegawai,
+                'username' => $username,
+                'password' => $password,
                 'jenis_kelamin' => $jenis_kelamin,
                 'jabatan' => $jabatan,
                 'tanggal_masuk' => $tanggal_masuk,
                 'status' => $status,
                 'hak_akses' => $hak_akses,
-                'username' => $username,
-                'password' => $password,
                 'photo' => $photo,
             );
 
@@ -96,7 +97,7 @@ class dataPegawai extends CI_controller
         $this->form_validation->set_rules('nik', 'NIK', 'required');
         $this->form_validation->set_rules('nama_pegawai', 'Nama Pegawai', 'required');
         $this->form_validation->set_rules('username', 'Username', 'required');
-        $this->form_validation->set_rules('passsword', 'Password', 'required');
+        $this->form_validation->set_rules('password', 'Password', 'required');
         $this->form_validation->set_rules('jenis_kelamin', 'Jenis Kelamin', 'required');
         $this->form_validation->set_rules('tanggal_masuk', 'Tanggal Masuk', 'required');
         $this->form_validation->set_rules('jabatan', 'Jabatan', 'required');
@@ -109,13 +110,14 @@ class dataPegawai extends CI_controller
             $id= $this->input->post('id_pegawai');
             $nik= $this->input->post('nik');
             $nama_pegawai= $this->input->post('nama_pegawai');
+            $username= $this->input->post('username');
+            $password= md5($this->input->post('password'));
             $jenis_kelamin= $this->input->post('jenis_kelamin');
             $jabatan= $this->input->post('jabatan');
             $tanggal_masuk= $this->input->post('tanggal_masuk');
             $status= $this->input->post('status');
             $hak_akses= $this->input->post('hak_akses');
-            $username= $this->input->post('username');
-            $password= md5($this->input->post('password'));
+            
             $photo= $_FILES['photo']['name'];
             if ($photo) {
                 $config['upload_path'] = './assets/photo';
@@ -132,13 +134,14 @@ class dataPegawai extends CI_controller
             $data = array(
                 'nik' => $nik,
                 'nama_pegawai' => $nama_pegawai,
+                'username' => $username,
+                'password' => $password,
                 'jenis_kelamin' => $jenis_kelamin,
                 'jabatan' => $jabatan,
                 'tanggal_masuk' => $tanggal_masuk,
                 'status' => $status,
                 'hak_akses' => $hak_akses,
-                'username' => $username,
-                'password' => $password,
+                
             );
                
            
