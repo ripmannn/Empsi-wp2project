@@ -26,6 +26,8 @@ class dataPegawai extends CI_controller
     {
         $this->form_validation->set_rules('nik', 'NIK', 'required');
         $this->form_validation->set_rules('nama_pegawai', 'Nama Pegawai', 'required');
+        $this->form_validation->set_rules('username', 'Username', 'required');
+        $this->form_validation->set_rules('passsword', 'Password', 'required');
         $this->form_validation->set_rules('jenis_kelamin', 'Jenis Kelamin', 'required');
         $this->form_validation->set_rules('tanggal_masuk', 'Tanggal Masuk', 'required');
         $this->form_validation->set_rules('jabatan', 'Jabatan', 'required');
@@ -93,6 +95,8 @@ class dataPegawai extends CI_controller
     {
         $this->form_validation->set_rules('nik', 'NIK', 'required');
         $this->form_validation->set_rules('nama_pegawai', 'Nama Pegawai', 'required');
+        $this->form_validation->set_rules('username', 'Username', 'required');
+        $this->form_validation->set_rules('passsword', 'Password', 'required');
         $this->form_validation->set_rules('jenis_kelamin', 'Jenis Kelamin', 'required');
         $this->form_validation->set_rules('tanggal_masuk', 'Tanggal Masuk', 'required');
         $this->form_validation->set_rules('jabatan', 'Jabatan', 'required');
