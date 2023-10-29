@@ -40,6 +40,9 @@ class dataPegawai extends CI_controller
             $jabatan= $this->input->post('jabatan');
             $tanggal_masuk= $this->input->post('tanggal_masuk');
             $status= $this->input->post('status');
+            $hak_akses= $this->input->post('hak_akses');
+            $username= $this->input->post('username');
+            $password= md5($this->input->post('password'));
             $photo= $_FILES['photo']['name'];
             if($photo = ''){} else {
                 $config['upload_path'] = './assets/photo';
@@ -60,6 +63,9 @@ class dataPegawai extends CI_controller
                 'jabatan' => $jabatan,
                 'tanggal_masuk' => $tanggal_masuk,
                 'status' => $status,
+                'hak_akses' => $hak_akses,
+                'username' => $username,
+                'password' => $password,
                 'photo' => $photo,
             );
 
@@ -103,6 +109,9 @@ class dataPegawai extends CI_controller
             $jabatan= $this->input->post('jabatan');
             $tanggal_masuk= $this->input->post('tanggal_masuk');
             $status= $this->input->post('status');
+            $hak_akses= $this->input->post('hak_akses');
+            $username= $this->input->post('username');
+            $password= md5($this->input->post('password'));
             $photo= $_FILES['photo']['name'];
             if ($photo) {
                 $config['upload_path'] = './assets/photo';
@@ -123,6 +132,9 @@ class dataPegawai extends CI_controller
                 'jabatan' => $jabatan,
                 'tanggal_masuk' => $tanggal_masuk,
                 'status' => $status,
+                'hak_akses' => $hak_akses,
+                'username' => $username,
+                'password' => $password,
             );
                
            
