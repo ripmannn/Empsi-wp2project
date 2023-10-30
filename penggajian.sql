@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 24, 2023 at 10:06 AM
+-- Generation Time: Oct 30, 2023 at 02:35 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -40,7 +40,6 @@ CREATE TABLE `data_jabatan` (
 --
 
 INSERT INTO `data_jabatan` (`id_jabatan`, `nama_jabatan`, `gaji_pokok`, `tj_transport`, `uang_makan`) VALUES
-(2, 'Backend', '6000000', '500000', '100000'),
 (5, 'OB', '1000000', '50000', '100000'),
 (7, 'full', '1000000', '50000', '100000'),
 (9, 'Fullstack Development', '2000000', '50000', '100000'),
@@ -84,6 +83,8 @@ CREATE TABLE `data_pegawai` (
   `id_pegawai` int(11) NOT NULL,
   `nik` varchar(50) NOT NULL,
   `nama_pegawai` varchar(225) NOT NULL,
+  `username` varchar(120) NOT NULL,
+  `password` varchar(120) NOT NULL,
   `jenis_kelamin` varchar(20) NOT NULL,
   `jabatan` varchar(50) NOT NULL,
   `tanggal_masuk` date NOT NULL,
@@ -96,10 +97,12 @@ CREATE TABLE `data_pegawai` (
 -- Dumping data for table `data_pegawai`
 --
 
-INSERT INTO `data_pegawai` (`id_pegawai`, `nik`, `nama_pegawai`, `jenis_kelamin`, `jabatan`, `tanggal_masuk`, `status`, `photo`, `hak_akses`) VALUES
-(1, '1234567890', 'naruto', 'Laki-laki', 'Frontend', '2023-10-18', 'Karyawan Tetap', 'default.png', 0),
-(12, '1236546497', 'aerial', 'Perempuan', 'OB', '2023-10-20', 'Pegawai Tetap', 'aerial.jpeg', 0),
-(13, '546456564564', 'pharact', 'Laki-laki', 'Staff Keuangan', '2023-10-17', 'Pegawai Tetap', 'WhatsApp_Image_2023-10-02_at_18_01_08.jpeg', 0);
+INSERT INTO `data_pegawai` (`id_pegawai`, `nik`, `nama_pegawai`, `username`, `password`, `jenis_kelamin`, `jabatan`, `tanggal_masuk`, `status`, `photo`, `hak_akses`) VALUES
+(12, '1236546497', 'aerial', 'aerial', '202cb962ac59075b964b07152d234b70', 'Laki-laki', 'OB', '2023-10-20', 'Pegawai Tetap', 'aerial.jpeg', 0),
+(13, '546456564564', 'pharact', '', '', 'Laki-laki', 'Staff Keuangan', '2023-10-17', 'Pegawai Tetap', 'WhatsApp_Image_2023-10-02_at_18_01_08.jpeg', 0),
+(14, '753159785', 'Bamban', '', '', 'Laki-laki', 'Staff Keuangan', '2023-10-27', 'Pegawai Tetap', 'WhatsApp_Image_2023-10-25_at_18_42_22-removebg-preview.png', 0),
+(15, '12367134543', 'sugenggg', 'sugeng', '202cb962ac59075b964b07152d234b70', 'Laki-laki', 'Fullstack Development', '2023-10-29', 'Pegawai Tetap', 'pngwing_com_(3).png', 2),
+(16, '874932759587', 'kimoci', 'kimoci', '202cb962ac59075b964b07152d234b70', 'Perempuan', 'Fullstack Development', '2023-10-30', 'Pegawai Tetap', 'pngwing_com_(1).png', 2);
 
 -- --------------------------------------------------------
 
@@ -124,6 +127,13 @@ CREATE TABLE `potongan_gaji` (
   `potongan` varchar(120) NOT NULL,
   `jml_potongan` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `potongan_gaji`
+--
+
+INSERT INTO `potongan_gaji` (`id`, `potongan`, `jml_potongan`) VALUES
+(0, 'Alpha', 150000);
 
 --
 -- Indexes for dumped tables
@@ -173,7 +183,7 @@ ALTER TABLE `data_kehadiran`
 -- AUTO_INCREMENT for table `data_pegawai`
 --
 ALTER TABLE `data_pegawai`
-  MODIFY `id_pegawai` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_pegawai` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `hak_akses`
