@@ -37,23 +37,24 @@
                             <div class="col-lg-12">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">APLIKASI PENGGAJIAN<br><b>PT.BINTANG ABADI SENTOSA</b></h1>
+                                        <h1 class="h4 text-gray-900 mb-4">APLIKASI PENGGAJIAN<br><b>PT. BINTANG ABADI SENTOSA</b></h1>
                                     </div>
-                                    <form class="user">
+                                    <?= $this->session->flashdata('pesan') ?>
+                                    <form class="user" method="POST" action="<?php echo base_url('welcome')?>">
                                         <div class="form-group">
                                             <input type="text" class="form-control form-control-user"
                                                 id="exampleInputEmail" aria-describedby="emailHelp"
                                                 placeholder="Enter Username..." name="Username">
+                                                <?= form_error('username','<div class="text-small text-danger" >','</div>') ?>
                                         </div>
                                         <div class="form-group">
                                             <input type="password" class="form-control form-control-user"
                                                 id="exampleInputPassword" placeholder="Password" name="Password">
+                                                <?= form_error('password','<div class="text-small text-danger" >','</div>') ?>
                                         </div>
                                         <hr>
-                                        <a href="index.html" class="btn btn-primary btn-user btn-block">
-                                            Login
+                                        <button type='submit' class="btn btn-primary btn-user btn-block">Login</button>
                                         </a>
-                                        
                                     </form>
                         
                                 </div>

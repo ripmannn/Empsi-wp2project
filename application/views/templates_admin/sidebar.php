@@ -77,7 +77,7 @@
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="#" data-toggle="modal" data-target="#sidelogoutModal">
+                <a class="nav-link" href="<?= echo base_url('welcome/logout')?>" data-toggle="modal" data-target="#sidelogoutModal">
                     <i class="fas fa-fw fa-sign-out-alt"></i>
                     <span>Logout</span></a>
             </li>
@@ -114,8 +114,8 @@
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Selamat Datang Kamu</span>
-                                <img class="img-profile rounded-circle" src="<?= base_url('assets/') ?>img/undraw_profile.svg">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Selamat Datang <?= $this->session->userdata('nama_pegawai')?></span>
+                                <img class="img-profile rounded-circle" src="<?= base_url('assets/photo/').$this->session->userdata('photo') ?>">
                             </a>
                         </li>
                     </ul>
