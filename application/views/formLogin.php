@@ -40,16 +40,16 @@
                                         <h1 class="h4 text-gray-900 mb-4">APLIKASI PENGGAJIAN<br><b>PT. BINTANG ABADI SENTOSA</b></h1>
                                     </div>
                                     <?= $this->session->flashdata('pesan') ?>
-                                    <form class="user" method="POST" action="<?php echo base_url('welcome')?>">
+                                    <form class="user" method="post" action="<?= base_url('welcome')?>">
                                         <div class="form-group">
                                             <input type="text" class="form-control form-control-user"
                                                 id="exampleInputEmail" aria-describedby="emailHelp"
-                                                placeholder="Enter Username..." name="Username">
+                                                placeholder="Enter Username..." name="username">
                                                 <?= form_error('username','<div class="text-small text-danger" >','</div>') ?>
                                         </div>
                                         <div class="form-group">
                                             <input type="password" class="form-control form-control-user"
-                                                id="exampleInputPassword" placeholder="Password" name="Password">
+                                                id="exampleInputPassword" placeholder="password" name="password">
                                                 <?= form_error('password','<div class="text-small text-danger" >','</div>') ?>
                                         </div>
                                         <hr>

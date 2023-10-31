@@ -77,7 +77,7 @@
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="<?= echo base_url('welcome/logout')?>" data-toggle="modal" data-target="#sidelogoutModal">
+                <a class="nav-link" href="<?= base_url('welcome/logout')?>" data-toggle="modal" data-target="#sidelogoutModal">
                     <i class="fas fa-fw fa-sign-out-alt"></i>
                     <span>Logout</span></a>
             </li>

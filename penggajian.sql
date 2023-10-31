@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 30, 2023 at 02:35 AM
+-- Generation Time: Oct 31, 2023 at 01:59 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -43,7 +43,8 @@ INSERT INTO `data_jabatan` (`id_jabatan`, `nama_jabatan`, `gaji_pokok`, `tj_tran
 (5, 'OB', '1000000', '50000', '100000'),
 (7, 'full', '1000000', '50000', '100000'),
 (9, 'Fullstack Development', '2000000', '50000', '100000'),
-(10, 'Staff Keuangan', '3000000', '100000', '50000');
+(10, 'Staff Keuangan', '3000000', '100000', '50000'),
+(11, 'admin', '5000000', '150000', '150000');
 
 -- --------------------------------------------------------
 
@@ -98,11 +99,10 @@ CREATE TABLE `data_pegawai` (
 --
 
 INSERT INTO `data_pegawai` (`id_pegawai`, `nik`, `nama_pegawai`, `username`, `password`, `jenis_kelamin`, `jabatan`, `tanggal_masuk`, `status`, `photo`, `hak_akses`) VALUES
-(12, '1236546497', 'aerial', 'aerial', '202cb962ac59075b964b07152d234b70', 'Laki-laki', 'OB', '2023-10-20', 'Pegawai Tetap', 'aerial.jpeg', 0),
-(13, '546456564564', 'pharact', '', '', 'Laki-laki', 'Staff Keuangan', '2023-10-17', 'Pegawai Tetap', 'WhatsApp_Image_2023-10-02_at_18_01_08.jpeg', 0),
-(14, '753159785', 'Bamban', '', '', 'Laki-laki', 'Staff Keuangan', '2023-10-27', 'Pegawai Tetap', 'WhatsApp_Image_2023-10-25_at_18_42_22-removebg-preview.png', 0),
-(15, '12367134543', 'sugenggg', 'sugeng', '202cb962ac59075b964b07152d234b70', 'Laki-laki', 'Fullstack Development', '2023-10-29', 'Pegawai Tetap', 'pngwing_com_(3).png', 2),
-(16, '874932759587', 'kimoci', 'kimoci', '202cb962ac59075b964b07152d234b70', 'Perempuan', 'Fullstack Development', '2023-10-30', 'Pegawai Tetap', 'pngwing_com_(1).png', 2);
+(12, '1236546497', 'aerial', 'aerial', '202cb962ac59075b964b07152d234b70', 'Laki-laki', 'OB', '2023-10-20', 'Pegawai Tetap', 'aerial.jpeg', 2),
+(14, '753159785', 'Bambang', 'bambang', '202cb962ac59075b964b07152d234b70', 'Laki-laki', 'Staff Keuangan', '2023-10-27', 'Pegawai Tetap', 'WhatsApp_Image_2023-10-25_at_18_42_22-removebg-preview.png', 2),
+(18, '3405782093890', 'aku', 'admin', '202cb962ac59075b964b07152d234b70', 'Laki-laki', 'admin', '2023-10-31', 'Pegawai Tetap', 'pngwing_com.png', 1),
+(19, '234325454', 'ahmad', 'admin2', '202cb962ac59075b964b07152d234b70', 'Laki-laki', 'admin', '2023-10-31', 'Pegawai Tetap', 'pngwing_com_(2).png', 1);
 
 -- --------------------------------------------------------
 
@@ -115,6 +115,14 @@ CREATE TABLE `hak_akses` (
   `keterangan` varchar(50) NOT NULL,
   `hak_akses` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `hak_akses`
+--
+
+INSERT INTO `hak_akses` (`id`, `keterangan`, `hak_akses`) VALUES
+(1, 'admin', 1),
+(2, 'pegawai', 2);
 
 -- --------------------------------------------------------
 
@@ -171,7 +179,7 @@ ALTER TABLE `hak_akses`
 -- AUTO_INCREMENT for table `data_jabatan`
 --
 ALTER TABLE `data_jabatan`
-  MODIFY `id_jabatan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_jabatan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `data_kehadiran`
@@ -183,13 +191,13 @@ ALTER TABLE `data_kehadiran`
 -- AUTO_INCREMENT for table `data_pegawai`
 --
 ALTER TABLE `data_pegawai`
-  MODIFY `id_pegawai` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id_pegawai` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `hak_akses`
 --
 ALTER TABLE `hak_akses`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

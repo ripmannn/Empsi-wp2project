@@ -32,6 +32,7 @@ class dataPegawai extends CI_controller
         $this->form_validation->set_rules('tanggal_masuk', 'Tanggal Masuk', 'required');
         $this->form_validation->set_rules('jabatan', 'Jabatan', 'required');
         $this->form_validation->set_rules('status', 'Status', 'required');
+        $this->form_validation->set_rules('hak_akses', 'Hak Akses', 'required');
 
         if ($this->form_validation->run() == FALSE) {
             $this->tambahData();
@@ -102,6 +103,7 @@ class dataPegawai extends CI_controller
         $this->form_validation->set_rules('tanggal_masuk', 'Tanggal Masuk', 'required');
         $this->form_validation->set_rules('jabatan', 'Jabatan', 'required');
         $this->form_validation->set_rules('status', 'Status', 'required');
+        $this->form_validation->set_rules('hak_akses', 'Hak Akses', 'required');
     
         if ($this->form_validation->run() == FALSE) {
             $id= $this->input->post('id_pegawai');
