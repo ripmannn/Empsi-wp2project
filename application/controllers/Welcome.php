@@ -32,6 +32,8 @@ class Welcome extends CI_Controller
 				$this->session->set_userdata('hak_akses', $cek->hak_akses);
 				$this->session->set_userdata('nama_pegawai', $cek->nama_pegawai);
 				$this->session->set_userdata('photo', $cek->photo);
+				$this->session->set_userdata('id_pegawai', $cek->id_pegawai);
+
 				switch ($cek->hak_akses) {
 					case 1:
 						redirect('admin/dashboard');
@@ -45,7 +47,7 @@ class Welcome extends CI_Controller
 						break;
 				}
 			}
-		}	
+		}
 	}
 	public function logout()
 	{

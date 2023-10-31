@@ -3,7 +3,9 @@
 
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800"><?= $title ?></h1>
+        <h1 class="h3 mb-0 text-gray-800">
+            <?= $title ?>
+        </h1>
     </div>
     <div class="card mb-3">
         <div class="card-header bg-primary text-white">
@@ -36,7 +38,9 @@
                         <option value="">--Pilih Tahun--</option>
                         <?php $tahun = date('Y');
                         for ($i = 2023; $i < $tahun + 5; $i++) { ?>
-                            <option value="<?php echo $i ?>"><?php echo $i ?></option>
+                            <option value="<?php echo $i ?>">
+                                <?php echo $i ?>
+                            </option>
                         <?php } ?>
                     </select>
                 </div>
@@ -60,8 +64,10 @@
     ?>
     <div class="alert alert-info">
         Menampilkan Data Kehadiran Pegawai Bulan: <span class="font-weight-bold">
-            <?php echo $bulan ?></span> Tahun: <span class="font-weight-bold">
-            <?php echo $tahun ?></span>
+            <?php echo $bulan ?>
+        </span> Tahun: <span class="font-weight-bold">
+            <?php echo $tahun ?>
+        </span>
     </div>
 
     <form method="POST">
@@ -82,19 +88,30 @@
                 </tr>
 
                 <?php $no = 1;
-                foreach ($input_absensi as $a) : ?>
+                foreach ($input_absensi as $a): ?>
                     <tr>
                         <input type="hidden" name="bulan[]" class="form-control" value="<?php echo $bulantahun ?>">
                         <input type="hidden" name="nik[]" class="form-control" value="<?php echo $a->nik ?>">
                         <input type="hidden" name="nama_pegawai[]" class="form-control" value="<?php echo $a->nama_pegawai ?>">
-                        <input type="hidden" name="jenis_kelamin[]" class="form-control" value="<?php echo $a->jenis_kelamin ?>">
+                        <input type="hidden" name="jenis_kelamin[]" class="form-control"
+                            value="<?php echo $a->jenis_kelamin ?>">
                         <input type="hidden" name="nama_jabatan[]" class="form-control" value="<?php echo $a->nama_jabatan ?>">
 
-                        <td><?php echo $no++ ?></td>
-                        <td><?php echo $a->nik ?></td>
-                        <td><?php echo $a->nama_pegawai ?></td>
-                        <td><?php echo $a->jenis_kelamin ?></td>
-                        <td><?php echo $a->nama_jabatan ?></td>
+                        <td>
+                            <?php echo $no++ ?>
+                        </td>
+                        <td>
+                            <?php echo $a->nik ?>
+                        </td>
+                        <td>
+                            <?php echo $a->nama_pegawai ?>
+                        </td>
+                        <td>
+                            <?php echo $a->jenis_kelamin ?>
+                        </td>
+                        <td>
+                            <?php echo $a->nama_jabatan ?>
+                        </td>
                         <td><input type="number" name="hadir[]" class="form-control" value="0"></td>
                         <td><input type="number" name="sakit[]" class="form-control" value="0"></td>
                         <td><input type="number" name="alpha[]" class="form-control" value="0"></td>
@@ -102,10 +119,11 @@
                 <?php endforeach; ?>
 
             </table>
-    </form>
-<?php } else { ?>
-    <span class="badge badge-danger">
-        <i class="fas fa-info-circle"> Data sudah terisi, silahkan input data kehadiran pada bulan dan tahun yang belum terisi </i></span>
-<?php } ?>
+        </form>
+    <?php } else { ?>
+        <span class="badge badge-danger">
+            <i class="fas fa-info-circle"> Data sudah terisi, silahkan input data kehadiran pada bulan dan tahun yang belum
+                terisi </i></span>
+    <?php } ?>
 </div>
 </div>
