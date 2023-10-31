@@ -2,6 +2,16 @@
 
 class DataAbsensi extends CI_Controller
 {
+
+    public function __construct()
+    {
+        parent::__construct();
+        if ($this->session->userdata('hak_akses') != '1') {
+            $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-message" role="alert">
+            <strong>Anda Belum Login !</strong> </div>');
+            redirect('welcome');
+        }
+    }
     public function index()
     {
         $data['title'] = "Data Absensi Pegawai";
