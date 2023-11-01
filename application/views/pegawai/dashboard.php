@@ -5,9 +5,9 @@
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800"><?= $title ?></h1>
     </div>
-    <div class="alert alert-success font-weight-bold mb-4" style="width:65%">Selamat datang, Anda login sebagai pegawai.</div>
+    <div class="alert alert-success font-weight-bold mb-4 text-center" >Selamat datang, <span class="text-danger" > <?= $this->session->userdata('nama_pegawai') ?> </span>login sebagai pegawai.</div>
 
-    <div class="card" style="margin-bottom: 120px; width: 65%">
+    <div class="card">
         <div class="card-header font-weight-bold bg-primary text-white">
             Data Pegawai
         </div>
@@ -15,10 +15,10 @@
         <?php foreach ($pegawai as $p) : ?>
             <div class="card-body">
                 <div class="row">
-                    <div class="col-md-5">
+                    <div class="col-md-3">
                         <img style="width: 250px" src="<?php echo base_url('assets/photo/' . $p->photo) ?>">
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-9">
                         <table class="table">
                             <tr>
                                 <td>Nama Pegawai</td>
@@ -46,3 +46,7 @@
             </div>
         <?php endforeach; ?>
     </div>
+</div>
+
+
+</div>

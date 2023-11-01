@@ -26,14 +26,14 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="<?= base_url('pegawai/data_gaji') ?>">
+                <a class="nav-link" href="<?= base_url('pegawai/dataGaji') ?>">
                     <i class="fas fa-fw fa-money-check-alt"></i>
                     <span>Data Gaji</span></a>
             </li>
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url('gantiPassword') ?> ">
+                <a class="nav-link" href="#">
                     <i class="fas fa-fw fa-unlock"></i>
                     <span>Ganti Password</span></a>
             </li>
