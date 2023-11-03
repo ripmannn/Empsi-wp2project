@@ -254,4 +254,19 @@
     });
   });
 
+  /**
+   * Toggle "Learn More" and "Show Less" for hidden text
+   */
+  document.getElementById("learn-more-link").addEventListener("click", function () {
+    var hiddenText = document.getElementById("hidden-text");
+    if (hiddenText.style.display === "none" || hiddenText.style.display === "") {
+      hiddenText.style.display = "block";
+      this.innerHTML = "Show Less";
+    } else {
+      hiddenText.style.display = "none";
+      this.innerHTML = "Learn More";
+    }
+  });
+  
+
 })()

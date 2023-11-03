@@ -28,7 +28,7 @@
   <!-- Template Main CSS File -->
   <link href="<?= base_url('assets/vendorlandingpage/') ?>assets/css/style.css" rel="stylesheet">
 
- 
+
 </head>
 
 <body>
@@ -46,7 +46,7 @@
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#team">Team</a></li>
-          
+
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -60,8 +60,8 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
-          <h1>Better Solutions For Your Payroll</h1>
-          <h2>Empowering Your Business with Accurate Payroll Management - Your Partner for Payroll Excellence</h2>
+          <h1>Solusi Terbaik untuk Pengelolaan Gaji Anda</h1>
+          <h2>Mendorong Peningkatan Bisnis Anda Melalui Pengelolaan Gaji yang Akurat - Mitra Anda dalam Meraih Kesuksesan</h2>
           <div class="d-flex justify-content-center justify-content-lg-start">
             <a href="<?= base_url('welcome') ?>" class="btn-get-started scrollto">LOGIN</a>
           </div>
@@ -114,33 +114,31 @@
     <!-- ======= About Us Section ======= -->
     <section id="about" class="about">
       <div class="container" data-aos="fade-up">
-
         <div class="section-title">
           <h2>About Us</h2>
         </div>
-
         <div class="row content">
           <div class="col-lg-6">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
-            </p>
+            <p>Penggajian lebih efisien dengan EMPSI</p>
             <ul>
-              <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
-              <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit</li>
-              <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
+              <li><i class="ri-check-double-line"></i> Pemrosesan penggajian yang aman</li>
+              <li><i class="ri-check-double-line"></i> Perhitungan yang dijamin akurat dan cepat</li>
+              <li><i class="ri-check-double-line"></i> Pembayaran gaji karyawan yang fleksibel</li>
             </ul>
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0">
             <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum.
+              Kami adalah tim yang berdedikasi untuk membantu mengelola penggajian Anda menjadi lebih efisien tanpa kerumitan. Kami berkomitmen untuk menyederhanakan proses penggajian sehingga Anda dapat fokus mengembangkan bisnis Anda.
             </p>
-            <a href="#" class="btn-learn-more">Learn More</a>
+            <div id="hidden-text" style="display: none;">
+              Visi kami adalah memberikan solusi yang aman dan andal untuk mengelola penggajian karyawan Anda. Dengan perhitungan yang akurat dan cepat serta fitur yang fleksibel, kami selalu siap memenuhi kebutuhan bisnis Anda. Kami percaya setiap bisnis memiliki potensi kesuksesan yang tidak terbatas.
+              EMPSI siap mendukung perusahaan Anda agar dapat mencapai puncak kesuksesan tanpa kendala gaji.
+              Bergabunglah dengan EMPSI dan temukan bagaimana manajemen penggajian yang efektif dapat membawa perubahan positif pada bisnis Anda. Kami bekerja sama untuk masa depan yang cerah dan sejahtera.
+              EMPSI, mitra penggajian tepercaya untuk bisnis Anda.
+            </div>
+            <a href="javascript:void(0);" id="learn-more-link">Learn More</a>
           </div>
         </div>
-
       </div>
     </section><!-- End About Us Section -->
 
@@ -153,37 +151,47 @@
           <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
 
             <div class="content">
-              <h3>Fitur Penggajian <strong>Meliputi</strong></h3>
+              <h3>Pembayaran Gaji Karyawan <strong>Efektif dan Tanpa Risiko</strong></h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
+                Aman, cepat, dan mudah. Semua fitur tersedia dalam satu aplikasi.
               </p>
             </div>
 
             <div class="accordion-list">
               <ul>
                 <li>
-                  <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1"><span>01</span> Non consectetur a erat nam at lectus urna duis? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1"><span>01</span> Rekapitulasi absensi
+                    <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                   <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
                     <p>
-                      Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+                      Sistem aplikasi dapat dilakukan berdasarkan rekap absensi, seperti kehadiran karyawan, jam lembur,dan cuti.
                     </p>
                   </div>
                 </li>
 
                 <li>
-                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed"><span>02</span> Feugiat scelerisque varius morbi enim nunc? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed"><span>02</span> Akses mudah ke laporan gaji <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                   <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
                     <p>
-                      Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                      Perencanaan budgeting untuk payroll karyawan dengan data laporan yang akurat dan dapat diakses karyawan kapan saja dan dimana saja.
                     </p>
                   </div>
                 </li>
 
                 <li>
-                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed"><span>03</span> Dolor sit amet consectetur adipiscing elit? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed"><span>03</span>Perhitungan lengkap gaji , potongan hingga insentif <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                   <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
                     <p>
-                      Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
+                      Selain gaji pokok, potongan dan bonus (THR, dsb) harus dihitung. Data tersebut harus di-input ke database agar masuk dalam perhitungan sistem.
+                    </p>
+                  </div>
+                </li>
+
+                <li>
+                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed"><span>04</span>Akses mudah slip gaji<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
+                    <p>
+                      Akses slip gaji setiap bulannya dengan mudah dan aman.
                     </p>
                   </div>
                 </li>
@@ -207,7 +215,7 @@
 
         <div class="section-title">
           <h2>Team</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <p>Meet the dedicated team behind EMPSI.</p>
         </div>
 
         <div class="row">
@@ -218,7 +226,7 @@
               <div class="member-info">
                 <h4>Ahmad Bintang Juliansyah</h4>
                 <span>19221352</span>
-                <p><i>"..............."</i></p>
+                <p><i>"Kerja Kerja Kerja"</i></p>
                 <div class="social">
                   <a href=""><i class="ri-twitter-fill"></i></a>
                   <a href=""><i class="ri-facebook-fill"></i></a>
@@ -235,7 +243,7 @@
               <div class="member-info">
                 <h4>Ahmad Nur Azriel</h4>
                 <span>19220613</span>
-                <p><i>".................."</i></p>
+                <p><i>"Kerja Kerja Kerja"</i></p>
                 <div class="social">
                   <a href=""><i class="ri-twitter-fill"></i></a>
                   <a href=""><i class="ri-facebook-fill"></i></a>
@@ -252,7 +260,7 @@
               <div class="member-info">
                 <h4>Arief Rahman Pratama</h4>
                 <span>19221595</span>
-                <p><i>"......................."</i></p>
+                <p><i>"Kerja Kerja Kerja"</i></p>
                 <div class="social">
                   <a href=""><i class="ri-twitter-fill"></i></a>
                   <a href=""><i class="ri-facebook-fill"></i></a>
@@ -269,7 +277,7 @@
               <div class="member-info">
                 <h4>Sakinatul Ulfa</h4>
                 <span>19221026</span>
-                <p><i>"....................."</i></p>
+                <p><i>"Kerja Kerja Kerja"</i></p>
                 <div class="social">
                   <a href=""><i class="ri-twitter-fill"></i></a>
                   <a href=""><i class="ri-facebook-fill"></i></a>
@@ -286,7 +294,7 @@
               <div class="member-info">
                 <h4>Sisca Lolita Amalia</h4>
                 <span>19220382</span>
-                <p><i>"...................."</i></p>
+                <p><i>"Kerja Kerja Kerja"</i></p>
                 <div class="social">
                   <a href=""><i class="ri-twitter-fill"></i></a>
                   <a href=""><i class="ri-facebook-fill"></i></a>
@@ -302,7 +310,7 @@
       </div>
     </section><!-- End Team Section -->
 
-    
+
 
   </main><!-- End #main -->
 
@@ -315,9 +323,9 @@
       <div class="copyright">
         &copy; Copyright <strong><span>EMPSI</span></strong> <?= date('Y'); ?> All Rights Reserved
       </div>
-    
-    
-    
+
+
+
     </div>
   </footer><!-- End Footer -->
 
