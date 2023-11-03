@@ -36,7 +36,8 @@
                         <input type="number" name="uang_makan" id="uang_makan" class="form-control" value="<?= $j->uang_makan ?>">
                         <?= form_error('uang_makan', '<div class="text-small text-danger" >', '</div>') ?>
                     </div>
-                    <button type="submit" class="btn btn-success">Update</button>
+                    <a class="btn btn-warning" href="<?= base_url('admin/dataJabatan') ?>">Back</a>
+                    <button type="submit" class="btn btn-primary">Update</button>
                 </form>
             <?php endforeach; ?>
         </div>

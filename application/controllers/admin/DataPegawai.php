@@ -64,7 +64,7 @@ class dataPegawai extends CI_controller
                 $config['allowed_types'] = 'jgp|jpeg|png';
                 $this->load->library('upload', $config);
                 if (!$this->upload->do_upload('photo')) {
-                    echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    echo '<div class="alert alert-danger alert-message" role="alert">
                     <strong>Photo Gagal diupload !</strong> </div>';
                 } else {
                     $photo = $this->upload->data('file_name');
@@ -85,7 +85,7 @@ class dataPegawai extends CI_controller
             );
 
             $this->penggajianModel->insert_data($data, 'data_pegawai');
-            $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+            $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-message" role="alert">
             <strong>Data berhasil ditambahkan !</strong> </div>');
             redirect('admin/dataPegawai');
         }
@@ -164,7 +164,7 @@ class dataPegawai extends CI_controller
             );
 
             $this->penggajianModel->update_data('data_pegawai', $data, $where);
-            $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+            $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-message" role="alert">
             <strong>Data berhasil diupdate !</strong> </div>');
             redirect('admin/dataPegawai');
         }
@@ -173,8 +173,8 @@ class dataPegawai extends CI_controller
     {
         $where = array('id_pegawai' => $id);
         $this->penggajianModel->delete_data($where, 'data_pegawai');
-        $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
-            <strong>Data berhasil dihapus !</strong> </div>');
+        $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-message" role="alert">
+        <strong>Data berhasil dihapus !</strong> </div>');
         redirect('admin/dataPegawai');
     }
 }

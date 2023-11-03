@@ -43,4 +43,17 @@ class PenggajianModel extends CI_Model
             return FALSE;
         }
     }
+
+    public function check_username_existence($username) {
+        $this->db->where('username', $username);
+        $result         = $this->db->where('username',$username)
+                                  ->limit(1)
+                                  ->get('data_pegawai'); // 'users' is the table where usernames are stored, change it to your table name
+
+        if ($result->num_rows() > 0) {
+            return true; // Username exists
+        } else {
+            return false; // Username doesn't exist
+        }
+    }
 }

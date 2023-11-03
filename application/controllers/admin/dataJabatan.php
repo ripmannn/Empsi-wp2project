@@ -55,13 +55,8 @@ class dataJabatan extends CI_Controller
             );
 
             $this->penggajianModel->insert_data($data, 'data_jabatan');
-            $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
-            <strong>Data berhasil ditambahkan! </strong>
-            <button type="button" class="close"
-                data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-            </div>');
+            $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-message" role="alert">
+            <strong>Data berhasil ditambahkan !</strong> </div>');
             redirect('admin/dataJabatan');
         }
     }
@@ -107,7 +102,7 @@ class dataJabatan extends CI_Controller
             );
 
             $this->penggajianModel->update_data('data_jabatan', $data, $where);
-            $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+            $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-message" role="alert">
             <strong>Data berhasil diupdate !</strong> </div>');
             redirect('admin/dataJabatan');
         }
@@ -117,8 +112,8 @@ class dataJabatan extends CI_Controller
     {
         $where = array('id_jabatan' => $id);
         $this->penggajianModel->delete_data($where, 'data_jabatan');
-        $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
-            <strong>Data berhasil dihapus !</strong> </div>');
+        $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-message" role="alert">
+        <strong>Data berhasil dihapus !</strong> </div>');
         redirect('admin/dataJabatan');
     }
 }

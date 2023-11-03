@@ -17,6 +17,7 @@
         <h1>PT. BINTANG MAKMUR SEJAHTERA</h1>
         <h2>Slip Gaji Pegawai</h2>
         <hr style="width: 50%; border-width: 5px; color: black; " >
+        <br>
     </center>
 
         <?php foreach($potongan as $p): {
@@ -109,10 +110,10 @@
                 </td>
 
                 <td width="230px">
-                    <p>Jakarta, <?= date("d M Y") ?> <br> IT Manager, </p>
+                    <p>Jakarta, <?= date("d M Y") ?> <br> Finance, </p>
                     <br>
                     <br>
-                    <p>Arief Rahman P S.kom M.kom</p>
+                    <p>_____________________</p>
                 </td>
             </tr>
         </table>

@@ -2,13 +2,12 @@
 
 class Dashboard extends CI_Controller
 {
-
     public function __construct()
     {
         parent::__construct();
         if ($this->session->userdata('hak_akses') != '2') {
             $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-message" role="alert">
-            <strong>Anda Belum Login !</strong> </div>');
+            <strong  >Anda Belum Login !</strong> </div>');
             redirect('welcome');
         }
     }

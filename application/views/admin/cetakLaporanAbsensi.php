@@ -64,6 +64,20 @@
         </tr>
         <?php endforeach; ?>
     </table>
+
+    <table width="100%">
+        <tr>
+            <td></td>
+            <td width="200px">
+                <p>Jakarta,
+                    <?php echo date("d M Y") ?> <br> Finance
+                </p>
+                <br>
+                <br>
+                <p>_____________________</p>
+            </td>
+        </tr>
+    </table>
 </body>
 </html>
 

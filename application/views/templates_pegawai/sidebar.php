@@ -4,14 +4,14 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul style="background-color: #186F65;" class="navbar-nav  sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul style=" background-color:  cadetblue ; " class="navbar-nav  sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url('admin/dashboard') ?>">
                 <div class="sidebar-brand-icon">
                     <i><img src="<?= base_url('assets/img/echostar.png') ?>" style="width: 70px;" alt="logo echostar"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">#Echo<span style="color: skyblue;">star</span></div>
+                <div class="sidebar-brand-text mx-3">EMPSI</div>
             </a>
 
             <!-- Divider -->
@@ -77,7 +77,7 @@
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Selamat Datang
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Hello
                                     <?= $this->session->userdata('nama_pegawai') ?>
                                 </span>
                                 <img class="img-profile rounded-circle" src="<?= base_url('assets/photo/') . $this->session->userdata('photo') ?>">

@@ -44,8 +44,8 @@
             
 
 
-            <!-- Bootstrap core JavaScript-->
-            <script src="<?= base_url('assets/') ?>vendor/jquery/jquery.min.js"></script>
+             <!-- Bootstrap core JavaScript-->
+             <script src="<?= base_url('assets/') ?>vendor/jquery/jquery.min.js"></script>
             <script src="<?= base_url('assets/') ?>vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
             <!-- Core plugin JavaScript-->
@@ -60,6 +60,14 @@
             <!-- Page level custom scripts -->
             <script src="<?= base_url('assets/') ?>js/demo/chart-area-demo.js"></script>
             <script src="<?= base_url('assets/') ?>js/demo/chart-pie-demo.js"></script>
+            <!-- data tables -->
+            <script src="<?= base_url('assets/'); ?>vendor/datatables/jquery.dataTables.min.js"></script>
+            <script src="<?= base_url('assets/'); ?>vendor/datatables/dataTables.bootstrap4.min.js"></script>
+            <script src="<?= base_url('assets/'); ?>js/demo/datatables-demo.js"></script>
+            <link href="<?= base_url('assets/'); ?>vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+            <script>
+                $('.alert-message').alert().delay(3000).slideUp('slow');
+            </script>
 
             </body>
 

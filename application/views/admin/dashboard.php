@@ -5,7 +5,9 @@
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800"><?= $title ?></h1>
     </div>
-
+    <?= $this->session->flashdata('pesan') ?>
+    <div class="alert alert-success font-weight-bold mb-4 text-center" >Selamat datang, <span class="text-primary text-uppercase " > 
+        <?= $this->session->userdata('nama_pegawai') ?> </span>Anda login sebagai Admin.</div>
     <!-- Content Row -->
     <div class="row">
 
@@ -15,7 +17,7 @@
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1"> 
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                 Data pegawai
                             </div>
                             <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $pegawai ?></div>

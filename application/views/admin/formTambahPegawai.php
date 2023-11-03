@@ -88,7 +88,9 @@
                     <?= form_error('hak_akses', '<div class="text-small text-danger" >', '</div>') ?>
                 </div>
 
-                <button type="submit" class="btn btn-primary" >Simpan</button>
+                <a class="btn btn-warning mt-3" href="<?= base_url('admin/dataPegawai') ?>">Back</a>
+                <button type="reset" class="btn btn-danger mt-3" >Reset</button>
+                <button type="submit" class="btn btn-primary mt-3" >Simpan</button>
 
             </form>
         </div>

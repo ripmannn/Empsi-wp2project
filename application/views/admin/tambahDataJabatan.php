@@ -33,7 +33,9 @@
                     <input type="text" name="uang_makan" id="uang_makan" class="form-control">
                     <?= form_error('uang_makan','<div class="text-small text-danger" >','</div>') ?>
                 </div>
-                <button type="submit" class="btn btn-success" >Submit</button>
+                <a class="btn btn-warning" href="<?= base_url('admin/dataJabatan') ?>">Back</a>
+                <button type="reset" class="btn btn-danger" >Reset</button>
+                <button type="submit" class="btn btn-primary" >Submit</button>
             </form>
         </div>
 

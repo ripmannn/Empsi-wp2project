@@ -25,9 +25,9 @@ class GantiPassword extends CI_Controller
             $data = array('password' => md5($passBaru));
             $id = array('id_pegawai' => $this->session->userdata('id_pegawai'));
             $this->penggajianModel->update_data('data_pegawai', $data, $id);
-            $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
-            <strong>Password berhasil diganti!</strong> </div>');
-            redirect('welcome');
+            $this->session->set_flashdata('pesan', '<div class="text-center alert alert-success alert-message" role="alert">
+            <strong>Password berhasil diganti !</strong> </div>');
+            redirect('admin/dashboard');
         } else {
             $data['title'] = "Ganti Password";
             $this->load->view('templates_admin/header', $data);

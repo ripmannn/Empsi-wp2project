@@ -65,8 +65,7 @@
                     <i class="fas fa-eye"></i> Tampilkan Data</button>
 
                 <?php if (count($gaji) > 0) { ?>
-                    <a href="<?= base_url('admin/dataPenggajian/cetakGaji?bulan=' . $bulan), '&tahun=' . $tahun ?>"
-                        class="btn btn-success mb-2 ml-3">
+                    <a href="<?= base_url('admin/dataPenggajian/cetakGaji?bulan=' . $bulan), '&tahun=' . $tahun ?>" class="btn btn-success mb-2 ml-3">
                         <i class="fas fa-print"></i> Cetak Daftar Gaji</a>
                 <?php } else { ?>
                     <button class="btn btn-success mb-2 ml-3" data-toggle="modal" data-target="#exampleModal" type="button">
@@ -106,59 +105,63 @@
     if ($jml_data > 0) { ?>
 
         <div class="table-responsive">
-            <table class="table table-bordered table-striped">
-                <tr>
-                    <th class="text-center">No</th>
-                    <th class="text-center">NIK</th>
-                    <th class="text-center">Nama Pegawai</th>
-                    <th class="text-center">Jenis Kelamin</th>
-                    <th class="text-center">Jabatan</th>
-                    <th class="text-center">Gaji Pokok</th>
-                    <th class="text-center">Tunjangan Transport</th>
-                    <th class="text-center">Uang Makan</th>
-                    <th class="text-center">Potongan</th>
-                    <th class="text-center">Total Gaji</th>
-                </tr>
-
-                <?php foreach ($potongan as $p) {
-                    $alpha = $p->jml_potongan;
-                } ?>
-                <?php $no = 1;
-                foreach ($gaji as $g): ?>
-                    <?php $potongan = $g->alpha * $alpha ?>
+            <table class="table table-bordered  shadow" id="dataTable" width="100%" cellspacing="0">
+                <thead class="thead-dark">
                     <tr>
-                        <td class="text-center">
-                            <?= $no++ ?>
-                        </td>
-                        <td class="text-center">
-                            <?= $g->nik ?>
-                        </td>
-                        <td class="text-center">
-                            <?= $g->nama_pegawai ?>
-                        </td>
-                        <td class="text-center">
-                            <?= $g->jenis_kelamin ?>
-                        </td>
-                        <td class="text-center">
-                            <?= $g->nama_jabatan ?>
-                        </td>
-                        <td class="text-center">Rp.
-                            <?= number_format($g->gaji_pokok, 0, ',', '.') ?>
-                        </td>
-                        <td class="text-center">Rp.
-                            <?= number_format($g->tj_transport, 0, ',', '.') ?>
-                        </td>
-                        <td class="text-center">Rp.
-                            <?= number_format($g->uang_makan, 0, ',', '.') ?>
-                        </td>
-                        <td class="text-center">Rp.
-                            <?= number_format($potongan, 0, ',', '.') ?>
-                        </td>
-                        <td class="text-center">Rp.
-                            <?= number_format($g->gaji_pokok + $g->tj_transport + $g->uang_makan - $potongan, 0, ',', '.') ?>
-                        </td>
+                        <th class="text-center">No</th>
+                        <th class="text-center">NIK</th>
+                        <th class="text-center">Nama Pegawai</th>
+                        <th class="text-center">Jenis Kelamin</th>
+                        <th class="text-center">Jabatan</th>
+                        <th class="text-center">Gaji Pokok</th>
+                        <th class="text-center">Tunjangan Transport</th>
+                        <th class="text-center">Uang Makan</th>
+                        <th class="text-center">Potongan</th>
+                        <th class="text-center">Total Gaji</th>
                     </tr>
-                <?php endforeach; ?>
+                </thead>
+                <tbody>
+
+                    <?php foreach ($potongan as $p) {
+                        $alpha = $p->jml_potongan;
+                    } ?>
+                    <?php $no = 1;
+                    foreach ($gaji as $g) : ?>
+                        <?php $potongan = $g->alpha * $alpha ?>
+                        <tr>
+                            <td class="text-center">
+                                <?= $no++ ?>
+                            </td>
+                            <td class="text-center">
+                                <?= $g->nik ?>
+                            </td>
+                            <td class="text-center">
+                                <?= $g->nama_pegawai ?>
+                            </td>
+                            <td class="text-center">
+                                <?= $g->jenis_kelamin ?>
+                            </td>
+                            <td class="text-center">
+                                <?= $g->nama_jabatan ?>
+                            </td>
+                            <td class="text-center">Rp.
+                                <?= number_format($g->gaji_pokok, 0, ',', '.') ?>
+                            </td>
+                            <td class="text-center">Rp.
+                                <?= number_format($g->tj_transport, 0, ',', '.') ?>
+                            </td>
+                            <td class="text-center">Rp.
+                                <?= number_format($g->uang_makan, 0, ',', '.') ?>
+                            </td>
+                            <td class="text-center">Rp.
+                                <?= number_format($potongan, 0, ',', '.') ?>
+                            </td>
+                            <td class="text-center">Rp.
+                                <?= number_format($g->gaji_pokok + $g->tj_transport + $g->uang_makan - $potongan, 0, ',', '.') ?>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
+                </tbody>
             </table>
         </div>
     <?php } else { ?>
@@ -176,8 +179,7 @@
 
 <!-- modal cetak gaji -->
 
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">

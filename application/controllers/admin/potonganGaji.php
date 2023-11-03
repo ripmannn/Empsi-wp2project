@@ -46,13 +46,8 @@ class PotonganGaji extends CI_Controller
                 'jml_potongan'  => $jml_potongan
             );
             $this->penggajianModel->insert_data($data, 'potongan_gaji');
-            $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
-            <strong>Data berhasil ditambahkan! </strong>
-            <button type="button" class="close"
-                data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-            </div>');
+            $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-message" role="alert">
+            <strong>Data berhasil ditambahkan !</strong> </div>');
             redirect('admin/potonganGaji');
         }
     }
@@ -89,12 +84,8 @@ class PotonganGaji extends CI_Controller
             );
 
             $this->penggajianModel->update_data('potongan_gaji', $data, $where);
-            $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
-            <strong>Data berhasil diupdate!</strong>
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-            </button>
-            </div>');
+            $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-message" role="alert">
+            <strong>Data berhasil diupdate !</strong> </div>');
             redirect('admin/potonganGaji');
         }
     }
@@ -104,12 +95,8 @@ class PotonganGaji extends CI_Controller
     {
         $where = array('id' => $id);
         $this->penggajianModel->delete_data($where, 'potongan_gaji');
-        $this->session->set_flashdata('pesan', '<div class=alert alert-success alert-dismissible fade show" role="alert">
-        <strong>Data berhasil dihapus!</strong>
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-        </button>
-        </div>');
+        $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-message" role="alert">
+        <strong>Data berhasil dihapus !</strong> </div>');
         redirect('admin/potonganGaji');
     }
 }

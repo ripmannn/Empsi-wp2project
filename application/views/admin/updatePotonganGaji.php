@@ -18,9 +18,11 @@
                         <input type="number" name="jml_potongan" class="form-control" value="<?php echo $p->jml_potongan ?>">
                         <?php echo form_error('jml_potongan'); ?>
                     </div>
+                    <a class="btn btn-warning" href="<?= base_url('admin/potonganGaji') ?>">Back</a>
                     <button type="submit" class="btn btn-primary">Update</button>
                 </form>
             <?php endforeach; ?>
         </div>
     </div>
+</div>
 </div>

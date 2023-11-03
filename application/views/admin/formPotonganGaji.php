@@ -22,8 +22,9 @@
                 <input type="number" name="jml_potongan" class="form-control">
                 <?php echo form_error('jml_potongan') ?>
             </div>
-
+            <a class="btn btn-warning" href="<?= base_url('admin/potonganGaji') ?>">Back</a>
             <button type="submit" class="btn btn-primary">Simpan</button>
         </form>
     </div>
+</div>
 </div>

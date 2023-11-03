@@ -96,12 +96,16 @@
                     <?= form_error('hak_akses', '<div class="text-small text-danger" >', '</div>') ?>
                 </div>
 
+                <a class="btn btn-warning" href="<?= base_url('admin/dataPegawai') ?>">Back</a>
                 <button type="submit" class="btn btn-primary" >Simpan</button>
+                
             </form>
+            
             <?php endforeach; ?>
         </div>
+        
     </div>
-
+    
 </div>
 
 </div>
