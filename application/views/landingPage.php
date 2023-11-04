@@ -61,7 +61,7 @@
       <div class="row">
         <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
           <h1>Solusi Terbaik untuk Pengelolaan Gaji Anda</h1>
-          <h2>Mendorong Peningkatan Bisnis Anda Melalui Pengelolaan Gaji yang Akurat - Mitra Anda dalam Meraih Kesuksesan</h2>
+          <h2>Mendorong Peningkatan Bisnis Anda Melalui Pengelolaan Gaji yang Akurat - Partner Anda dalam Meraih Kesuksesan</h2>
           <div class="d-flex justify-content-center justify-content-lg-start">
             <a href="<?= base_url('welcome') ?>" class="btn-get-started scrollto">LOGIN</a>
           </div>
@@ -164,7 +164,7 @@
                     <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                   <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
                     <p>
-                      Sistem aplikasi dapat dilakukan berdasarkan rekap absensi, seperti kehadiran karyawan, jam lembur,dan cuti.
+                      Sistem aplikasi dapat dilakukan berdasarkan rekap absensi
                     </p>
                   </div>
                 </li>
@@ -173,16 +173,16 @@
                   <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed"><span>02</span> Akses mudah ke laporan gaji <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                   <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
                     <p>
-                      Perencanaan budgeting untuk payroll karyawan dengan data laporan yang akurat dan dapat diakses karyawan kapan saja dan dimana saja.
+                      Perencanaan budgeting untuk payroll karyawan dengan data laporan yang akurat dan dapat diakses karyawan.
                     </p>
                   </div>
                 </li>
 
                 <li>
-                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed"><span>03</span>Perhitungan lengkap gaji , potongan hingga insentif <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed"><span>03</span>Perhitungan lengkap gaji <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                   <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
                     <p>
-                      Selain gaji pokok, potongan dan bonus (THR, dsb) harus dihitung. Data tersebut harus di-input ke database agar masuk dalam perhitungan sistem.
+                      Selain gaji pokok, potongan harus dihitung. Data tersebut harus di-input ke database agar masuk dalam perhitungan sistem.
                     </p>
                   </div>
                 </li>
