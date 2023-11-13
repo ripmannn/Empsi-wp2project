@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 31, 2023 at 01:59 AM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.2.0
+-- Generation Time: Nov 13, 2023 at 11:27 AM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -40,11 +40,11 @@ CREATE TABLE `data_jabatan` (
 --
 
 INSERT INTO `data_jabatan` (`id_jabatan`, `nama_jabatan`, `gaji_pokok`, `tj_transport`, `uang_makan`) VALUES
-(5, 'OB', '1000000', '50000', '100000'),
-(7, 'full', '1000000', '50000', '100000'),
-(9, 'Fullstack Development', '2000000', '50000', '100000'),
-(10, 'Staff Keuangan', '3000000', '100000', '50000'),
-(11, 'admin', '5000000', '150000', '150000');
+(5, 'Tour Consultant', '5000000', '150000', '50000'),
+(7, 'Travel IT ', '8000000', '150000', '50000'),
+(9, 'Tour Leader', '6000000', '150000', '50000'),
+(10, 'Tour Guide', '4000000', '150000', '50000'),
+(11, 'Admin', '6000000', '150000', '50000');
 
 -- --------------------------------------------------------
 
@@ -63,16 +63,6 @@ CREATE TABLE `data_kehadiran` (
   `sakit` int(11) NOT NULL,
   `alpha` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `data_kehadiran`
---
-
-INSERT INTO `data_kehadiran` (`id_kehadiran`, `bulan`, `nik`, `nama_pegawai`, `jenis_kelamin`, `nama_jabatan`, `hadir`, `sakit`, `alpha`) VALUES
-(1, '102023', '1236546497', 'aerial', 'Perempuan', 'OB', 20, 1, 5),
-(2, '102023', '546456564564', 'pharact', 'Laki-laki', 'Staff Keuangan', 20, 5, 6),
-(3, '112023', '1236546497', 'aerial', 'Perempuan', 'OB', 20, 0, 10),
-(4, '112023', '546456564564', 'pharact', 'Laki-laki', 'Staff Keuangan', 20, 5, 5);
 
 -- --------------------------------------------------------
 
@@ -99,10 +89,16 @@ CREATE TABLE `data_pegawai` (
 --
 
 INSERT INTO `data_pegawai` (`id_pegawai`, `nik`, `nama_pegawai`, `username`, `password`, `jenis_kelamin`, `jabatan`, `tanggal_masuk`, `status`, `photo`, `hak_akses`) VALUES
-(12, '1236546497', 'aerial', 'aerial', '202cb962ac59075b964b07152d234b70', 'Laki-laki', 'OB', '2023-10-20', 'Pegawai Tetap', 'aerial.jpeg', 2),
-(14, '753159785', 'Bambang', 'bambang', '202cb962ac59075b964b07152d234b70', 'Laki-laki', 'Staff Keuangan', '2023-10-27', 'Pegawai Tetap', 'WhatsApp_Image_2023-10-25_at_18_42_22-removebg-preview.png', 2),
-(18, '3405782093890', 'aku', 'admin', '202cb962ac59075b964b07152d234b70', 'Laki-laki', 'admin', '2023-10-31', 'Pegawai Tetap', 'pngwing_com.png', 1),
-(19, '234325454', 'ahmad', 'admin2', '202cb962ac59075b964b07152d234b70', 'Laki-laki', 'admin', '2023-10-31', 'Pegawai Tetap', 'pngwing_com_(2).png', 1);
+(12, '3112212334421123', 'arji manda', 'arji', '202cb962ac59075b964b07152d234b70', 'Laki-laki', 'Tour Guide', '2023-10-20', 'Pegawai Tetap', 'male-administrator.png', 2),
+(14, '3009412211332234', 'Nisa Arbani', 'nisa', '202cb962ac59075b964b07152d234b70', 'Perempuan', 'Tour Consultant', '2023-10-27', 'Pegawai Tetap', '-female-.png', 2),
+(18, '3405782093890135', 'Edwardo Davinsi', 'admin', '827ccb0eea8a706c4c34a16891f84e7b', 'Laki-laki', 'Admin', '2023-10-31', 'Pegawai Tetap', 'male-administrator1.png', 1),
+(19, '3323344335546776', 'Excel Pratama', 'excel', '202cb962ac59075b964b07152d234b70', 'Laki-laki', 'Travel IT ', '2023-10-31', 'Pegawai Tetap', 'male-administrator2.png', 2),
+(20, '3662261389213786', 'Neira Sasmita', 'neira', '202cb962ac59075b964b07152d234b70', 'Perempuan', 'Tour Leader', '2023-11-13', 'Pegawai Tetap', '-female-1.png', 2),
+(21, '3512345235746976', 'Bambang Ackerman', 'bambang', '202cb962ac59075b964b07152d234b70', 'Laki-laki', 'Travel IT ', '2023-11-13', 'Pegawai Tetap', 'male-administrator3.png', 2),
+(22, '3509988576432345', 'Fahmi Andrian', 'fahmi', '202cb962ac59075b964b07152d234b70', 'Laki-laki', 'Tour Leader', '2023-11-13', 'Pegawai Tetap', 'male-administrator4.png', 2),
+(23, '3310092287446576', 'Anna Mandella', 'admin', '827ccb0eea8a706c4c34a16891f84e7b', 'Perempuan', 'Admin', '2023-11-13', 'Pegawai Tetap', '-female-3.png', 1),
+(24, '3224455006987568', 'Annie Lauren', 'annie', '202cb962ac59075b964b07152d234b70', 'Perempuan', 'Tour Consultant', '2023-11-13', 'Pegawai Tetap', '-female-4.png', 2),
+(25, '3609900112234123', 'Grishan Peter', 'grisha', '202cb962ac59075b964b07152d234b70', 'Laki-laki', 'Tour Guide', '2023-11-13', 'Pegawai Tetap', 'male-administrator5.png', 2);
 
 -- --------------------------------------------------------
 
@@ -191,7 +187,7 @@ ALTER TABLE `data_kehadiran`
 -- AUTO_INCREMENT for table `data_pegawai`
 --
 ALTER TABLE `data_pegawai`
-  MODIFY `id_pegawai` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id_pegawai` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `hak_akses`
