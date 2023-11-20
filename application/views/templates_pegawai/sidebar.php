@@ -7,11 +7,11 @@
         <ul style=" background-color:  cadetblue ; " class="navbar-nav  sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url('admin/dashboard') ?>">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center mt-2" href="<?= base_url('admin/dashboard') ?>">
                 <div class="sidebar-brand-icon">
-                    <i><img src="<?= base_url('assets/img/echostar.png') ?>" style="width: 70px;" alt="logo echostar"></i>
+                    <i><img src="<?= base_url('assets/img/echostar.png') ?>" style="width: 90px;" alt="logo echostar"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">EMPSI</div>
+                <div class="sidebar-brand-text mx-0">EMPSI</div>
             </a>
 
             <!-- Divider -->
@@ -70,6 +70,7 @@
                     </button>
 
                     <!-- Topbar Navbar -->
+                    <h4 class="font-weight-bold">PT. BINTANG ABADI SENTOSA</h4>
                     <ul class="navbar-nav ml-auto">
 
                         <div class="topbar-divider d-none d-sm-block"></div>

@@ -7,13 +7,11 @@
         <ul style="background-color: #186F65;" class="navbar-nav  sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center"
-                href="<?= base_url('admin/dashboard') ?>">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center mt-2" href="<?= base_url('admin/dashboard') ?>">
                 <div class="sidebar-brand-icon">
-                    <i><img src="<?= base_url('assets/img/echostar.png') ?>" style="width: 70px;"
-                            alt="logo echostar"></i>
+                    <i><img src="<?= base_url('assets/img/echostar.png') ?>" style="width: 90px;" alt="logo echostar"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">EMPSI</div>
+                <div class="sidebar-brand-text mx-0">EMPSI</div>
             </a>
 
             <!-- Divider -->
@@ -28,8 +26,7 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-database"></i>
                     <span>Data Master</span>
                 </a>
@@ -43,13 +40,11 @@
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-                    aria-expanded="true" aria-controls="collapseUtilities">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-fw fa-server"></i>
                     <span>Transaksi</span>
                 </a>
-                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
-                    data-parent="#accordionSidebar">
+                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="<?= base_url('admin/dataAbsensi') ?>">Data Absensi</a>
                         <a class="collapse-item" href="<?= base_url('admin/potonganGaji') ?>">Setting Potongan Gaji</a>
@@ -60,8 +55,7 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
-                    aria-expanded="true" aria-controls="collapsePages">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
                     <i class="fas fa-fw fa-file"></i>
                     <span>Laporan</span>
                 </a>
@@ -83,8 +77,7 @@
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="<?= base_url('welcome/logout') ?>" data-toggle="modal"
-                    data-target="#sidelogoutModal">
+                <a class="nav-link" href="<?= base_url('welcome/logout') ?>" data-toggle="modal" data-target="#sidelogoutModal">
                     <i class="fas fa-fw fa-sign-out-alt"></i>
                     <span>Logout</span></a>
             </li>
@@ -111,22 +104,24 @@
                     <!-- Sidebar Toggle (Topbar) -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
+
                     </button>
 
                     <!-- Topbar Navbar -->
+                    <h4 class="font-weight-bold">PT. BINTANG ABADI SENTOSA</h4>
                     <ul class="navbar-nav ml-auto">
 
-                        <div class="topbar-divider d-none d-sm-block"></div>
+                        <div class="topbar-divider d-none d-sm-block">
+
+                        </div>
 
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Hello
-                                    <?= $this->session->userdata('nama_pegawai') ?> 
+                                    <?= $this->session->userdata('nama_pegawai') ?>
                                 </span>
-                                <img class="img-profile rounded-circle"
-                                    src="<?= base_url('assets/photo/') . $this->session->userdata('photo') ?>">
+                                <img class="img-profile rounded-circle" src="<?= base_url('assets/photo/') . $this->session->userdata('photo') ?>">
                             </a>
                         </li>
                     </ul>
