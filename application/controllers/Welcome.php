@@ -10,7 +10,7 @@ class Welcome extends CI_Controller
 		$this->form_validation->set_rules('password', 'password', 'required');
 
 		if ($this->form_validation->run() == FALSE) {
-			$data['title'] = "Form Login";
+			$data['title'] = "Login";
 			$this->load->view('templates_admin/header', $data);
 			$this->load->view('templates_login/formLogin');
 			$this->load->view('templates_login/footerFormLogin');

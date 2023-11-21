@@ -261,7 +261,7 @@
     var hiddenText = document.getElementById("hidden-text");
     if (hiddenText.style.display === "none" || hiddenText.style.display === "") {
       hiddenText.style.display = "block";
-      this.innerHTML = "Show Less";
+      this.innerHTML = "Show Less" ;
     } else {
       hiddenText.style.display = "none";
       this.innerHTML = "Learn More";

@@ -6,7 +6,7 @@ class GantiPassword extends CI_Controller
 
     public function index()
     {
-        $data['title'] = "Ganti Password";
+        $data['title'] = "Ganti Password Admin";
         $this->load->view('templates_admin/header', $data);
         $this->load->view('templates_admin/sidebar');
         $this->load->view('formGantiPassword', $data);

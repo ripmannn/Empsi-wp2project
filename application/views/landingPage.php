@@ -10,7 +10,7 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link rel="shortcut icon" href="<?= base_url('assets/ico/echostar.ico') ?>" type="image/x-icon">
+  <link rel="shortcut icon" href="<?= base_url('assets/ico/echostar3.ico') ?>" type="image/x-icon">
   <link href="<?= base_url('assets/vendorlandingpage/') ?>assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -135,21 +135,21 @@
             </ul>
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0">
-            <p>
+            <p style="text-align: justify;" >
               Kami adalah tim yang berdedikasi untuk membantu mengelola penggajian Anda menjadi lebih efisien tanpa
               kerumitan. Kami berkomitmen untuk menyederhanakan proses penggajian sehingga Anda dapat fokus
               mengembangkan bisnis Anda.
             </p>
-            <div id="hidden-text" style="display: none;">
+            <div id="hidden-text" style="display: none; text-align: justify;">
               Visi kami adalah memberikan solusi yang aman dan andal untuk mengelola penggajian karyawan Anda. Dengan
               perhitungan yang akurat dan cepat serta fitur yang fleksibel, kami selalu siap memenuhi kebutuhan bisnis
               Anda. Kami percaya setiap bisnis memiliki potensi kesuksesan yang tidak terbatas.
               EMPSI siap mendukung perusahaan Anda agar dapat mencapai puncak kesuksesan tanpa kendala gaji.
               Bergabunglah dengan EMPSI dan temukan bagaimana manajemen penggajian yang efektif dapat membawa perubahan
               positif pada bisnis Anda. Kami bekerja sama untuk masa depan yang cerah dan sejahtera.
-              EMPSI, mitra penggajian tepercaya untuk bisnis Anda.
+              EMPSI, mitra penggajian terpercaya untuk bisnis Anda.
             </div>
-            <a href="javascript:void(0);" id="learn-more-link">Learn More</a>
+            <a class="btn-learn-more" href="javascript:void(0);" id="learn-more-link">Learn More</a>
           </div>
         </div>
       </div>
@@ -185,8 +185,8 @@
 
                 <li>
                   <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed"><span>02</span>
-                    Akses mudah ke laporan gaji <i class="bx bx-chevron-down icon-show"></i><i
-                      class="bx bx-chevron-up icon-close"></i></a>
+                    Akses mudah ke laporan gaji 
+                    <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                   <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
                     <p>
                       Perencanaan budgeting untuk payroll karyawan dengan data laporan yang akurat dan dapat diakses
@@ -196,9 +196,9 @@
                 </li>
 
                 <li>
-                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3"
-                    class="collapsed"><span>03</span>Perhitungan lengkap gaji <i
-                      class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed"><span>03</span>
+                  Perhitungan lengkap gaji 
+                  <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                   <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
                     <p>
                       Selain gaji pokok, potongan harus dihitung. Data tersebut harus di-input ke database agar masuk
@@ -208,10 +208,10 @@
                 </li>
 
                 <li>
-                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed"><span>04</span>Akses
+                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-4" class="collapsed"><span>04</span>Akses
                     mudah slip gaji<i class="bx bx-chevron-down icon-show"></i><i
                       class="bx bx-chevron-up icon-close"></i></a>
-                  <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
+                  <div id="accordion-list-4" class="collapse" data-bs-parent=".accordion-list">
                     <p>
                       Akses slip gaji setiap bulannya dengan mudah dan aman.
                     </p>
@@ -252,12 +252,7 @@
                 <h4>Ahmad Bintang Juliansyah</h4>
                 <span>19221352</span>
                 <p><i>"Don't be afraid to fail, be afraid not to try."</i></p>
-                <div class="social">
-                  <a href=""><i class="ri-twitter-fill"></i></a>
-                  <a href=""><i class="ri-facebook-fill"></i></a>
-                  <a href=""><i class="ri-instagram-fill"></i></a>
-                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                </div>
+
               </div>
             </div>
           </div>
@@ -270,12 +265,7 @@
                 <h4>Ahmad Nur Azriel</h4>
                 <span>19220613</span>
                 <p><i>"Only you can turn your dreams into a reality."</i></p>
-                <div class="social">
-                  <a href=""><i class="ri-twitter-fill"></i></a>
-                  <a href=""><i class="ri-facebook-fill"></i></a>
-                  <a href=""><i class="ri-instagram-fill"></i></a>
-                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                </div>
+
               </div>
             </div>
           </div>
@@ -288,12 +278,7 @@
                 <h4>Arief Rahman Pratama</h4>
                 <span>19221595</span>
                 <p><i>"Just because it's hard doesn't mean it's impossible. You can do it."</i></p>
-                <div class="social">
-                  <a href=""><i class="ri-twitter-fill"></i></a>
-                  <a href=""><i class="ri-facebook-fill"></i></a>
-                  <a href=""><i class="ri-instagram-fill"></i></a>
-                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                </div>
+
               </div>
             </div>
           </div>
@@ -306,30 +291,20 @@
                 <h4>Sakinatul Ulfa</h4>
                 <span>19221026</span>
                 <p><i>"Be like a flower, survive the rain but use it to grow."</i></p>
-                <div class="social">
-                  <a href=""><i class="ri-twitter-fill"></i></a>
-                  <a href=""><i class="ri-facebook-fill"></i></a>
-                  <a href=""><i class="ri-instagram-fill"></i></a>
-                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                </div>
+
               </div>
             </div>
           </div>
 
           <div class="col-lg-6 mt-4">
-            <div class="member d-flex align-items-center" data-aos="fade-right" data-aos-delay="400">
+            <div class="member d-flex align-items-start" data-aos="fade-right" data-aos-delay="400">
               <div class="pic"><img src="<?= base_url('assets/vendorlandingpage/') ?>assets/img/team/sisca.jpg"
                   class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Sisca Lolita Amalia</h4>
                 <span>19220382</span>
                 <p><i>"Everything you do now is for your future."</i></p>
-                <div class="social">
-                  <a href=""><i class="ri-twitter-fill"></i></a>
-                  <a href=""><i class="ri-facebook-fill"></i></a>
-                  <a href=""><i class="ri-instagram-fill"></i></a>
-                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                </div>
+
               </div>
             </div>
           </div>
@@ -357,11 +332,11 @@
 
 
     </div>
-  </footer><!-- End Footer -->
+  </footer>
+  <!-- End Footer -->
 
   <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="<?= base_url('assets/vendorlandingpage/') ?>assets/vendor/aos/aos.js"></script>
