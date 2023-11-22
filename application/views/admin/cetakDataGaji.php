@@ -115,7 +115,7 @@
             <td></td>
             <td width="200px">
                 <p>Jakarta,
-                    <?php echo date("d M Y") ?> <br> Finance
+                    <?php echo date("d M Y") ?> <br> Manager Operational
                 </p>
                 <br>
                 <br>

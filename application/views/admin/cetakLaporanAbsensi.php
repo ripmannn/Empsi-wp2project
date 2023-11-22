@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title><?php echo $title?></title>
+    <title>
+        <?php echo $title ?>
+    </title>
     <style type="text/css">
-        body{
+        body {
             font-family: Arial;
             color: Black;
         }
-        </style>
+    </style>
 </head>
+
 <body>
     <center>
         <h1>PT. BINTANG SENTOSA ABADI</h1>
@@ -16,30 +20,34 @@
     </center>
     <?php
     if (
-            (isset($_GET['bulan']) && $_GET['bulan'] != '') &&
-            (isset($_GET['tahun']) && $_GET['tahun'] != '')
-        ) {
-            $bulan = $_GET['bulan'];
-            $tahun = $_GET['tahun'];
-            $bulantahun = $bulan . $tahun;
-        } else {
-            $bulan = date('m');
-            $tahun = date('Y');
-            $bulantahun = $bulan . $tahun;
-        }
+        (isset($_GET['bulan']) && $_GET['bulan'] != '') &&
+        (isset($_GET['tahun']) && $_GET['tahun'] != '')
+    ) {
+        $bulan = $_GET['bulan'];
+        $tahun = $_GET['tahun'];
+        $bulantahun = $bulan . $tahun;
+    } else {
+        $bulan = date('m');
+        $tahun = date('Y');
+        $bulantahun = $bulan . $tahun;
+    }
     ?>
     <table>
         <tr>
-        <td>Bulan</td>
-        <td>:</td>
-        <td><?php echo $bulan?></td>
+            <td>Bulan</td>
+            <td>:</td>
+            <td>
+                <?php echo $bulan ?>
+            </td>
         </tr>
     </table>
     <table>
         <tr>
-        <td>Tahun</td>
-        <td>:</td>
-        <td><?php echo $tahun?></td>
+            <td>Tahun</td>
+            <td>:</td>
+            <td>
+                <?php echo $tahun ?>
+            </td>
         </tr>
     </table>
     <table class="table table-bordered table-striped">
@@ -52,16 +60,31 @@
             <th>Sakit</th>
             <th>Alpha</th>
         </tr>
-        <?php $no=1; foreach($lap_kehadiran as $l):?>
-        <tr>
-            <td><?php echo $no++ ?></td>
-            <td><?php echo $l->nama_pegawai?></td>
-            <td><?php echo $l->nik?></td>
-            <td><?php echo $l->nama_jabatan?></td>
-            <td><?php echo $l->hadir?></td>
-            <td><?php echo $l->sakit?></td>
-            <td><?php echo $l->alpha?></td>
-        </tr>
+        <?php $no = 1;
+        foreach ($lap_kehadiran as $l): ?>
+            <tr>
+                <td>
+                    <?php echo $no++ ?>
+                </td>
+                <td>
+                    <?php echo $l->nama_pegawai ?>
+                </td>
+                <td>
+                    <?php echo $l->nik ?>
+                </td>
+                <td>
+                    <?php echo $l->nama_jabatan ?>
+                </td>
+                <td>
+                    <?php echo $l->hadir ?>
+                </td>
+                <td>
+                    <?php echo $l->sakit ?>
+                </td>
+                <td>
+                    <?php echo $l->alpha ?>
+                </td>
+            </tr>
         <?php endforeach; ?>
     </table>
 
@@ -70,7 +93,7 @@
             <td></td>
             <td width="200px">
                 <p>Jakarta,
-                    <?php echo date("d M Y") ?> <br> Finance
+                    <?php echo date("d M Y") ?> <br> Manager Operational
                 </p>
                 <br>
                 <br>
@@ -79,6 +102,7 @@
         </tr>
     </table>
 </body>
+
 </html>
 
 <script type="text/javascript">
