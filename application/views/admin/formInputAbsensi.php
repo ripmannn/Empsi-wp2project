@@ -112,9 +112,9 @@
                         <td>
                             <?php echo $a->nama_jabatan ?>
                         </td>
-                        <td><input type="number" name="hadir[]" class="form-control" value="0"></td>
-                        <td><input type="number" name="sakit[]" class="form-control" value="0"></td>
-                        <td><input type="number" name="alpha[]" class="form-control" value="0"></td>
+                        <td><input type="number" name="hadir[]" class="form-control" value="0" max="26"></td>
+                        <td><input type="number" name="sakit[]" class="form-control" value="0" max="26"></td>
+                        <td><input type="number" name="alpha[]" class="form-control" value="0" max="26"></td>
                     </tr>
                 <?php endforeach; ?>
 
