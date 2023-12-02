@@ -2,7 +2,7 @@
 <div class="container-fluid">
 
 
-    <div class="card mx-auto" >
+    <div class="card mx-auto" style="width: 35%" >
         <div class="card-header bg-success text-white text-center">
             Filter Slip Gaji Pegawai
         </div>

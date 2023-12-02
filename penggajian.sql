@@ -1,9 +1,9 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 19, 2023 at 01:55 AM
+-- Generation Time: Dec 02, 2023 at 03:23 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -69,36 +69,26 @@ CREATE TABLE `data_kehadiran` (
 --
 
 INSERT INTO `data_kehadiran` (`id_kehadiran`, `bulan`, `nik`, `nama_pegawai`, `jenis_kelamin`, `nama_jabatan`, `hadir`, `sakit`, `alpha`) VALUES
-(5, '112023', '3310092287446576', 'Anna Mandella', 'Perempuan', 'Admin', 23, 3, 0),
-(6, '112023', '3224455006987568', 'Annie Lauren', 'Perempuan', 'Tour Consultant', 24, 1, 1),
-(7, '112023', '3112212334421123', 'arji manda', 'Laki-laki', 'Tour Guide', 21, 4, 1),
-(8, '112023', '3512345235746976', 'Bambang Ackerman', 'Laki-laki', 'Travel IT ', 22, 3, 1),
-(9, '112023', '3405782093890135', 'Edwardo Davinsi', 'Laki-laki', 'Admin', 26, 0, 0),
-(10, '112023', '3323344335546776', 'Excel Pratama', 'Laki-laki', 'Travel IT ', 20, 4, 2),
-(11, '112023', '3509988576432345', 'Fahmi Andrian', 'Laki-laki', 'Tour Leader', 22, 2, 2),
-(12, '112023', '3609900112234123', 'Grishan Peter', 'Laki-laki', 'Tour Guide', 20, 3, 3),
-(13, '112023', '3662261389213786', 'Neira Sasmita', 'Perempuan', 'Tour Leader', 21, 2, 3),
-(14, '112023', '3009412211332234', 'Nisa Arbani', 'Perempuan', 'Tour Consultant', 25, 0, 1),
-(15, '102023', '3310092287446576', 'Anna Mandella', 'Perempuan', 'Admin', 0, 0, 0),
-(16, '102023', '3224455006987568', 'Annie Lauren', 'Perempuan', 'Tour Consultant', 0, 0, 0),
-(17, '102023', '3112212334421123', 'arji manda', 'Laki-laki', 'Tour Guide', 8, 0, 0),
-(18, '102023', '3512345235746976', 'Bambang Ackerman', 'Laki-laki', 'Travel IT ', 0, 0, 0),
-(19, '102023', '3405782093890135', 'Edwardo Davinsi', 'Laki-laki', 'Admin', 1, 0, 0),
-(20, '102023', '3323344335546776', 'Excel Pratama', 'Laki-laki', 'Travel IT ', 1, 0, 0),
-(21, '102023', '3509988576432345', 'Fahmi Andrian', 'Laki-laki', 'Tour Leader', 0, 0, 0),
-(22, '102023', '3609900112234123', 'Grishan Peter', 'Laki-laki', 'Tour Guide', 0, 0, 0),
-(23, '102023', '3662261389213786', 'Neira Sasmita', 'Perempuan', 'Tour Leader', 0, 0, 0),
-(24, '102023', '3009412211332234', 'Nisa Arbani', 'Perempuan', 'Tour Consultant', 3, 0, 0),
 (25, '122023', '3310092287446576', 'Anna Mandella', 'Perempuan', 'Admin', 23, 2, 1),
 (26, '122023', '3224455006987568', 'Annie Lauren', 'Perempuan', 'Tour Consultant', 19, 5, 2),
-(27, '122023', '3112212334421123', 'arji manda', 'Laki-laki', 'Tour Guide', 24, 1, 1),
+(27, '122023', '3112212334421123', 'Arji Manda', 'Laki-laki', 'Tour Guide', 24, 1, 1),
 (28, '122023', '3512345235746976', 'Bambang Ackerman', 'Laki-laki', 'Travel IT ', 24, 2, 0),
 (29, '122023', '3405782093890135', 'Edwardo Davinsi', 'Laki-laki', 'Admin', 23, 3, 0),
 (30, '122023', '3323344335546776', 'Excel Pratama', 'Laki-laki', 'Travel IT ', 20, 4, 2),
 (31, '122023', '3509988576432345', 'Fahmi Andrian', 'Laki-laki', 'Tour Leader', 26, 0, 0),
 (32, '122023', '3609900112234123', 'Grishan Peter', 'Laki-laki', 'Tour Guide', 23, 1, 2),
 (33, '122023', '3662261389213786', 'Neira Sasmita', 'Perempuan', 'Tour Leader', 25, 0, 1),
-(34, '122023', '3009412211332234', 'Nisa Arbani', 'Perempuan', 'Tour Consultant', 24, 0, 2);
+(34, '122023', '3009412211332234', 'Nisa Arbani', 'Perempuan', 'Tour Consultant', 24, 0, 2),
+(35, '012024', '3310092287446576', 'Anna Mandella', 'Perempuan', 'Tour Consultant', 17, 1, 2),
+(36, '012024', '3224455006987568', 'Annie Lauren', 'Perempuan', 'Tour Consultant', 18, 0, 2),
+(37, '012024', '3112212334421123', 'Arji Manda', 'Laki-laki', 'Tour Guide', 18, 2, 0),
+(38, '012024', '3512345235746976', 'Bambang Ackerman', 'Laki-laki', 'Travel IT ', 20, 0, 0),
+(39, '012024', '3405782093890135', 'Edwardo Davinsi', 'Laki-laki', 'Admin', 19, 1, 0),
+(40, '012024', '3323344335546776', 'Excel Pratama Suratmajda', 'Laki-laki', 'Travel IT ', 19, 0, 1),
+(41, '012024', '3509988576432345', 'Fahmi Andrian', 'Laki-laki', 'Tour Leader', 18, 2, 0),
+(42, '012024', '3609900112234123', 'Grishan Peter', 'Laki-laki', 'Tour Guide', 20, 0, 0),
+(43, '012024', '3662261389213786', 'Neira Sasmita', 'Perempuan', 'Tour Leader', 17, 0, 3),
+(44, '012024', '3009412211332234', 'Nisa Arbani', 'Perempuan', 'Tour Consultant', 18, 0, 2);
 
 -- --------------------------------------------------------
 
@@ -125,16 +115,16 @@ CREATE TABLE `data_pegawai` (
 --
 
 INSERT INTO `data_pegawai` (`id_pegawai`, `nik`, `nama_pegawai`, `username`, `password`, `jenis_kelamin`, `jabatan`, `tanggal_masuk`, `status`, `photo`, `hak_akses`) VALUES
-(12, '3112212334421123', 'arji manda', 'arji', '202cb962ac59075b964b07152d234b70', 'Laki-laki', 'Tour Guide', '2023-10-20', 'Pegawai Tetap', 'male-administrator.png', 2),
-(14, '3009412211332234', 'Nisa Arbani', 'nisa', '202cb962ac59075b964b07152d234b70', 'Perempuan', 'Tour Consultant', '2023-10-27', 'Pegawai Tetap', '-female-.png', 2),
-(18, '3405782093890135', 'Edwardo Davinsi', 'admin', '827ccb0eea8a706c4c34a16891f84e7b', 'Laki-laki', 'Admin', '2023-10-31', 'Pegawai Tetap', 'male-administrator1.png', 1),
-(19, '3323344335546776', 'Excel Pratama', 'excel', '202cb962ac59075b964b07152d234b70', 'Laki-laki', 'Travel IT ', '2023-10-31', 'Pegawai Tetap', 'male-administrator2.png', 2),
-(20, '3662261389213786', 'Neira Sasmita', 'neira', '202cb962ac59075b964b07152d234b70', 'Perempuan', 'Tour Leader', '2023-11-13', 'Pegawai Tetap', '-female-1.png', 2),
-(21, '3512345235746976', 'Bambang Ackerman', 'bambang', '202cb962ac59075b964b07152d234b70', 'Laki-laki', 'Travel IT ', '2023-11-13', 'Pegawai Tetap', 'male-administrator3.png', 2),
-(22, '3509988576432345', 'Fahmi Andrian', 'fahmi', '202cb962ac59075b964b07152d234b70', 'Laki-laki', 'Tour Leader', '2023-11-13', 'Pegawai Tetap', 'male-administrator4.png', 2),
-(23, '3310092287446576', 'Anna Mandella', 'admin2', '202cb962ac59075b964b07152d234b70', 'Perempuan', 'Admin', '2023-11-13', 'Pegawai Tetap', '-female-3.png', 1),
-(24, '3224455006987568', 'Annie Lauren', 'annie', '202cb962ac59075b964b07152d234b70', 'Perempuan', 'Tour Consultant', '2023-11-13', 'Pegawai Tetap', '-female-4.png', 2),
-(25, '3609900112234123', 'Grishan Peter', 'grisha', '202cb962ac59075b964b07152d234b70', 'Laki-laki', 'Tour Guide', '2023-11-13', 'Pegawai Tetap', 'male-administrator5.png', 2);
+(12, '3112212334421123', 'Arji Manda', 'arji', '202cb962ac59075b964b07152d234b70', 'Laki-laki', 'Tour Guide', '2023-11-30', 'Pegawai Tetap', 'male-administrator.png', 2),
+(14, '3009412211332234', 'Nisa Arbani', 'nisa', '202cb962ac59075b964b07152d234b70', 'Perempuan', 'Tour Consultant', '2023-11-29', 'Pegawai Tetap', '-female-.png', 2),
+(18, '3405782093890135', 'Edwardo Davinsi', 'admin', '827ccb0eea8a706c4c34a16891f84e7b', 'Laki-laki', 'Admin', '2023-11-30', 'Pegawai Tetap', 'male-administrator1.png', 1),
+(19, '3323344335546776', 'Excel Pratama Suratmajda', 'excel', '202cb962ac59075b964b07152d234b70', 'Laki-laki', 'Travel IT ', '2023-11-29', 'Pegawai Tetap', 'male-administrator2.png', 2),
+(20, '3662261389213786', 'Neira Sasmita', 'neira', '202cb962ac59075b964b07152d234b70', 'Perempuan', 'Tour Leader', '2023-11-30', 'Pegawai Tetap', '-female-1.png', 2),
+(21, '3512345235746976', 'Bambang Ackerman', 'bambang', '202cb962ac59075b964b07152d234b70', 'Laki-laki', 'Travel IT ', '2023-11-30', 'Pegawai Tetap', 'male-administrator3.png', 2),
+(22, '3509988576432345', 'Fahmi Andrian', 'fahmi', '202cb962ac59075b964b07152d234b70', 'Laki-laki', 'Tour Leader', '2023-11-30', 'Pegawai Tetap', 'male-administrator4.png', 2),
+(23, '3310092287446576', 'Anna Mandella', 'anna', '202cb962ac59075b964b07152d234b70', 'Perempuan', 'Tour Consultant', '2023-11-30', 'Pegawai Tetap', '-female-3.png', 2),
+(24, '3224455006987568', 'Annie Lauren', 'annie', '202cb962ac59075b964b07152d234b70', 'Perempuan', 'Tour Consultant', '2023-11-30', 'Pegawai Tetap', '-female-4.png', 2),
+(25, '3609900112234123', 'Grishan Peter', 'grisha', '202cb962ac59075b964b07152d234b70', 'Laki-laki', 'Tour Guide', '2023-11-30', 'Pegawai Tetap', 'male-administrator5.png', 2);
 
 -- --------------------------------------------------------
 
@@ -173,7 +163,7 @@ CREATE TABLE `potongan_gaji` (
 --
 
 INSERT INTO `potongan_gaji` (`id`, `potongan`, `jml_potongan`) VALUES
-(0, 'Alpha', 150000);
+(0, 'Alpha', 100000);
 
 --
 -- Indexes for dumped tables
@@ -217,7 +207,7 @@ ALTER TABLE `data_jabatan`
 -- AUTO_INCREMENT for table `data_kehadiran`
 --
 ALTER TABLE `data_kehadiran`
-  MODIFY `id_kehadiran` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id_kehadiran` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
 -- AUTO_INCREMENT for table `data_pegawai`

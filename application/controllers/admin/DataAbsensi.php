@@ -32,11 +32,14 @@ class DataAbsensi extends CI_Controller
         INNER JOIN data_jabatan ON data_pegawai.jabatan = data_jabatan.nama_jabatan
         WHERE data_kehadiran.bulan = $bulantahun
         ORDER BY data_pegawai.nama_pegawai ASC")->result();
+        
 
         $this->load->view('templates_admin/header', $data);
         $this->load->view('templates_admin/sidebar');
         $this->load->view('admin/dataAbsensi', $data);
         $this->load->view('templates_admin/footer');
+
+        
     }
 
     public function inputAbsensi()
