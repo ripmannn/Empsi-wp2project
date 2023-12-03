@@ -19,7 +19,7 @@ class dataJabatan extends CI_Controller
         $this->load->view('templates_admin/header', $data);
         $this->load->view('templates_admin/sidebar');
         $this->load->view('admin/dataJabatan', $data);
-        $this->load->view('templates_admin/footer');
+        $this->load->view('templates_admin/footer',$data);
     }
 
     public function tambahData()

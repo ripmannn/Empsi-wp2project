@@ -19,7 +19,7 @@
                 <i class="fas fa-angle-up"></i>
             </a>
 
-            
+
 
             <!--Side Logout Modal-->
             <div class="modal fade" id="sidelogoutModal" tabindex="-1" role="dialog" aria-labelledby="sidelogoutModalLabel" aria-hidden="true">
@@ -34,18 +34,21 @@
                         <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                         <div class="modal-footer">
                             <button class="btn btn-primary" type="button" data-dismiss="modal">Cancel</button>
-                            <a class="btn btn-danger" href="<?= base_url('welcome/logout')?>">Logout</a>
+                            <a class="btn btn-danger" href="<?= base_url('welcome/logout') ?>">Logout</a>
                         </div>
                     </div>
                 </div>
             </div>
-            
 
             
+            
 
 
-             <!-- Bootstrap core JavaScript-->
-             <script src="<?= base_url('assets/') ?>vendor/jquery/jquery.min.js"></script>
+
+
+
+            <!-- Bootstrap core JavaScript-->
+            <script src="<?= base_url('assets/') ?>vendor/jquery/jquery.min.js"></script>
             <script src="<?= base_url('assets/') ?>vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
             <!-- Core plugin JavaScript-->
@@ -65,8 +68,23 @@
             <script src="<?= base_url('assets/'); ?>vendor/datatables/dataTables.bootstrap4.min.js"></script>
             <script src="<?= base_url('assets/'); ?>js/demo/datatables-demo.js"></script>
             <link href="<?= base_url('assets/'); ?>vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
             <script>
                 $('.alert-message').alert().delay(3000).slideUp('slow');
+            </script>
+            <script>
+                function togglePassword() {
+                    var passwordField = document.getElementById("password");
+                    var passwordToggle = document.getElementById("passwordToggle");
+
+                    if (passwordField.type === "password") {
+                        passwordField.type = "text";
+                        passwordToggle.innerHTML = '<i class="fas fa-eye-slash"></i>';
+                    } else {
+                        passwordField.type = "password";
+                        passwordToggle.innerHTML = '<i class="fas fa-eye"></i>';
+                    }
+                }
             </script>
 
             </body>

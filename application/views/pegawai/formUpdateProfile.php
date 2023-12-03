@@ -5,7 +5,7 @@
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800"><?= $title ?></h1>
     </div>
-
+    <?= $this->session->flashdata('upload_error') ?>
     <div class="card" >
         <div class="card-body">
             <?php foreach ($pegawai as $p) : ?>
@@ -32,7 +32,7 @@
                         <?= form_error('photo', '<div class="text-small text-danger" >', '</div>') ?>
                     </div>
 
-                
+                    <a class="btn btn-warning" href="<?= base_url('pegawai/dashboard') ?>">Back</a>
                     <button type="submit" class="btn btn-primary">Simpan</button>
                 </form>
             <?php endforeach; ?>

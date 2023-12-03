@@ -51,8 +51,9 @@ class Dashboard extends CI_Controller
             $photo = $_FILES['photo']['name'];
             if ($photo) {
                 $config['upload_path'] = './assets/photo';
-                $config['max_size'] = '2048';
-                $config['allowed_types'] = 'jgp|jpeg|png';
+                $config['max_size'] = 2048; 
+                $config['allowed_types'] = 'png|jpeg';
+                $config['overwrite'] = TRUE;
 
                 $this->load->library('upload', $config);
                 
@@ -61,14 +62,16 @@ class Dashboard extends CI_Controller
                     $this->db->set('photo', $photo);
                     
                 } else {
-                    echo $this->upload->display_errors();
+                    $upload_error_message = $this->upload->display_errors();
+                    $this->session->set_flashdata('upload_error', '<div class="alert alert-danger alert-message" role="alert">
+                    <strong>'. $upload_error_message .'</strong></div>');
+                    redirect('pegawai/dashboard/updatedataaksi');
                 }
             }
 
             $data = array(
                 'nama_pegawai' => $nama_pegawai,
                 'username' => $username,
-               
                 
             );
 

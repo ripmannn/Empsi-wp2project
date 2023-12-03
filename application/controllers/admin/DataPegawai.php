@@ -19,7 +19,7 @@ class dataPegawai extends CI_controller
         $this->load->view('templates_admin/header', $data);
         $this->load->view('templates_admin/sidebar');
         $this->load->view('admin/dataPegawai', $data);
-        $this->load->view('templates_admin/footer');
+        $this->load->view('templates_admin/footer',$data);
     }
 
     public function tambahData()
@@ -43,6 +43,7 @@ class dataPegawai extends CI_controller
         $this->form_validation->set_rules('jabatan', 'Jabatan', 'required');
         $this->form_validation->set_rules('status', 'Status', 'required');
         $this->form_validation->set_rules('hak_akses', 'Hak Akses', 'required');
+        
 
         if ($this->form_validation->run() == FALSE) {
             $this->tambahData();
@@ -58,17 +59,25 @@ class dataPegawai extends CI_controller
             $hak_akses = $this->input->post('hak_akses');
 
             $photo = $_FILES['photo']['name'];
-            if ($photo = '') {
-            } else {
+            if (!empty($photo)) {
                 $config['upload_path'] = './assets/photo';
-                $config['allowed_types'] = 'jgp|jpeg|png';
+                $config['max_size'] = 2048; 
+                $config['allowed_types'] = 'png|jpeg';
+                $config['overwrite'] = TRUE;
                 $this->load->library('upload', $config);
-                if (!$this->upload->do_upload('photo')) {
-                    echo '<div class="alert alert-danger alert-message" role="alert">
-                    <strong>Photo Gagal diupload !</strong> </div>';
-                } else {
+
+                if ($this->upload->do_upload('photo')) {
                     $photo = $this->upload->data('file_name');
+                    $this->db->set('photo', $photo);
+                    
+                } else {
+                    $upload_error_message = $this->upload->display_errors();
+                    $this->session->set_flashdata('upload_error', '<div class="alert alert-danger alert-message" role="alert">
+                    <strong>'. $upload_error_message .'</strong></div>');
+                    redirect('admin/datapegawai/tambahdata');
                 }
+            } else {
+                $photo = 'admin_default.png';
             }
 
             $data = array(
@@ -96,8 +105,7 @@ class dataPegawai extends CI_controller
         $where = array('id_pegawai' => $id);
         $data['title'] = 'Update Data Pegawai';
         $data['jabatan'] = $this->penggajianModel->get_data('data_jabatan')->result();
-        $data['pegawai'] = $this->db->query("SELECT * FROM data_pegawai WHERE id_pegawai='$id'")
-            ->result();
+        $data['pegawai'] = $this->db->query("SELECT * FROM data_pegawai WHERE id_pegawai='$id'")->result();
         $this->load->view('templates_admin/header', $data);
         $this->load->view('templates_admin/sidebar');
         $this->load->view('admin/formUpdatePegawai', $data);
@@ -134,13 +142,19 @@ class dataPegawai extends CI_controller
             $photo = $_FILES['photo']['name'];
             if ($photo) {
                 $config['upload_path'] = './assets/photo';
-                $config['allowed_types'] = 'jgp|jpeg|png';
+                $config['max_size'] = 2048; 
+                $config['allowed_types'] = 'png|jpeg';
+                $config['overwrite'] = TRUE;
+
                 $this->load->library('upload', $config);
                 if ($this->upload->do_upload('photo')) {
                     $photo = $this->upload->data('file_name');
                     $this->db->set('photo', $photo);
                 } else {
-                    echo $this->upload->display_errors();
+                    $upload_error_message = $this->upload->display_errors();
+                    $this->session->set_flashdata('upload_error', '<div class="alert alert-danger alert-message" role="alert">
+                    <strong>'. $upload_error_message .'</strong></div>');
+                    redirect('admin/dataPegawai/updateData/'.($id));
                 }
             }
 

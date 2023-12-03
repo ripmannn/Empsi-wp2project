@@ -6,6 +6,7 @@
         <h1 class="h3 mb-0 text-gray-800"><?= $title ?></h1>
     </div>
     <?= $this->session->flashdata('pesan') ?>
+    
     <div class="alert alert-success font-weight-bold mb-4 text-center" >Selamat datang, <span class="text-primary text-uppercase " > <?= $this->session->userdata('nama_pegawai') ?> </span>Anda login sebagai pegawai.</div>
 
     <div class="card">

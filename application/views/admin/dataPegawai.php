@@ -47,7 +47,7 @@
                             <a class=" btn btn-sm btn-primary" href="<?= base_url('admin/dataPegawai/updateData/' . $p->id_pegawai) ?>">
                                 <i class="fas fa-edit"></i>
                             </a>
-                            <a onclick="return confirm('YAKIN DELETE DATA INI ?')" class=" btn btn-sm btn-danger" href="<?= base_url('admin/dataPegawai/deleteData/' . $p->id_pegawai) ?>">
+                            <a class=" btn btn-sm btn-danger" onclick="return confirm('YAKIN DELETE DATA INI ?')"  href="<?= base_url('admin/dataPegawai/deleteData/' . $p->id_pegawai) ?>" >
                                 <i class="fas fa-trash"></i>
                             </a>
                         </center>
