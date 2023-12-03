@@ -61,11 +61,12 @@
 
                 ?>
 
-                <button type="submit" class="btn btn-primary mb-2 ml-auto">
+                <button type="submit" class="btn btn-primary mb-2 ml-3">
                     <i class="fas fa-eye"></i> Tampilkan Data</button>
 
                 <?php if (count($gaji) > 0) { ?>
-                    <a href="<?= base_url('admin/dataPenggajian/cetakGaji?bulan=' . $bulan), '&tahun=' . $tahun ?>" class="btn btn-success mb-2 ml-3">
+                    <a href="<?= base_url('admin/dataPenggajian/cetakGaji?bulan=' . $bulan), '&tahun=' . $tahun ?>"
+                        class="btn btn-success mb-2 ml-3">
                         <i class="fas fa-print"></i> Cetak Daftar Gaji</a>
                 <?php } else { ?>
                     <button class="btn btn-success mb-2 ml-3" data-toggle="modal" data-target="#exampleModal" type="button">
@@ -126,7 +127,7 @@
                         $alpha = $p->jml_potongan;
                     } ?>
                     <?php $no = 1;
-                    foreach ($gaji as $g) : ?>
+                    foreach ($gaji as $g): ?>
                         <?php $potongan = $g->alpha * $alpha ?>
                         <tr>
                             <td class="text-center">
@@ -179,7 +180,8 @@
 
 <!-- modal cetak gaji -->
 
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">

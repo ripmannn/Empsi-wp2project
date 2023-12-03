@@ -3,7 +3,9 @@
 
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800"><?= $title ?></h1>
+        <h1 class="h3 mb-0 text-gray-800">
+            <?= $title ?>
+        </h1>
     </div>
     <div class="card mb-3">
         <div class="card-header bg-primary text-white">
@@ -30,20 +32,24 @@
                     </select>
                 </div>
 
-                <div class="form-group mb-2 ml-5">
+                <div class="form-group mb-2 ml-3">
                     <label for="staticEmail2">Tahun: </label>
                     <select class="form-control ml-3" name="tahun">
                         <option value="">--Pilih Tahun--</option>
                         <?php $tahun = date('Y');
                         for ($i = 2023; $i < $tahun + 5; $i++) { ?>
-                            <option value="<?php echo $i ?>"><?php echo $i ?></option>
+                            <option value="<?php echo $i ?>">
+                                <?php echo $i ?>
+                            </option>
                         <?php } ?>
                     </select>
                 </div>
 
 
-                <button type=" submit" class="btn btn-primary mb-2 ml-auto"><i class="fas fa-eye"></i>Tampilkan Data</button>
-                <a href="<?php echo base_url('admin/dataAbsensi/inputAbsensi') ?>" class="btn btn-success mb-2 ml-3"><i class="fas fa-plus"></i> Input Kehadiran</a>
+                <button type=" submit" class="btn btn-primary mb-2 ml-3"><i class="fas fa-eye"></i>Tampilkan
+                    Data</button>
+                <a href="<?php echo base_url('admin/dataAbsensi/inputAbsensi') ?>"
+                    class="btn btn-success mb-2 ml-auto"><i class="fas fa-plus"></i> Input Kehadiran</a>
             </form>
 
         </div>
@@ -61,8 +67,10 @@
     ?>
     <div class="alert alert-info">
         Menampilkan Data Kehadiran Pegawai Bulan: <span class="font-weight-bold">
-            <?php echo $bulan ?></span> Tahun: <span class="font-weight-bold">
-            <?php echo $tahun ?></span>
+            <?php echo $bulan ?>
+        </span> Tahun: <span class="font-weight-bold">
+            <?php echo $tahun ?>
+        </span>
     </div>
 
     <?php
@@ -84,24 +92,41 @@
             </tr>
 
             <?php $no = 1;
-            foreach ($absensi as $a) : ?>
+            foreach ($absensi as $a): ?>
                 <tr>
-                    <td><?php echo $no++ ?></td>
-                    <td><?php echo $a->nik ?></td>
-                    <td><?php echo $a->nama_pegawai ?></td>
-                    <td><?php echo $a->jenis_kelamin ?></td>
-                    <td><?php echo $a->jabatan ?></td>
-                    <td><?php echo $a->hadir ?></td>
-                    <td><?php echo $a->sakit ?></td>
-                    <td><?php echo $a->alpha ?></td>
+                    <td>
+                        <?php echo $no++ ?>
+                    </td>
+                    <td>
+                        <?php echo $a->nik ?>
+                    </td>
+                    <td>
+                        <?php echo $a->nama_pegawai ?>
+                    </td>
+                    <td>
+                        <?php echo $a->jenis_kelamin ?>
+                    </td>
+                    <td>
+                        <?php echo $a->jabatan ?>
+                    </td>
+                    <td>
+                        <?php echo $a->hadir ?>
+                    </td>
+                    <td>
+                        <?php echo $a->sakit ?>
+                    </td>
+                    <td>
+                        <?php echo $a->alpha ?>
+                    </td>
                 </tr>
             <?php endforeach; ?>
 
         </table>
 
     <?php } else { ?>
-        <span class="badge badge-danger"><i class="fas fa-info-circle">Data Masih Kosong, silahkan input data kehadiran pada bulan dan tahun yang anda pilih.</i></span>
+        <span class="badge badge-danger"><i class="fas fa-info-circle">Data Masih Kosong, silahkan input data kehadiran pada
+                bulan dan tahun yang anda pilih.</i></span>
     <?php } ?>
 
-    </div>
-    </div>
+</div>
+</div>
