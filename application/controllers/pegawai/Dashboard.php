@@ -64,7 +64,7 @@ class Dashboard extends CI_Controller
                 } else {
                     $upload_error_message = $this->upload->display_errors();
                     $this->session->set_flashdata('upload_error', '<div class="alert alert-danger alert-message" role="alert">
-                    <strong>'. $upload_error_message .'</strong></div>');
+                    <strong>'.$upload_error_message.'</strong></div>');
                     redirect('pegawai/dashboard/updatedataaksi');
                 }
             }
