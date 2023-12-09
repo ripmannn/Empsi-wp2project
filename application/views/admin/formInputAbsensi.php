@@ -37,7 +37,7 @@
                     <select class="form-control ml-3" name="tahun">
                         <option value="">--Pilih Tahun--</option>
                         <?php $tahun = date('Y');
-                        for ($i = 2023; $i < $tahun + 5; $i++) { ?>
+                        for($i = 2023; $i < $tahun + 5; $i++) { ?>
                             <option value="<?php echo $i ?>">
                                 <?php echo $i ?>
                             </option>
@@ -52,14 +52,14 @@
         </div>
     </div>
     <?php
-    if ((isset($_GET['bulan']) && $_GET['bulan'] != '') && (isset($_GET['tahun']) && $_GET['tahun'] != '')) {
+    if((isset($_GET['bulan']) && $_GET['bulan'] != '') && (isset($_GET['tahun']) && $_GET['tahun'] != '')) {
         $bulan = $_GET['bulan'];
         $tahun = $_GET['tahun'];
-        $bulantahun = $bulan . $tahun;
+        $bulantahun = $bulan.$tahun;
     } else {
         $bulan = date('m');
         $tahun = date('Y');
-        $bulantahun = $bulan . $tahun;
+        $bulantahun = $bulan.$tahun;
     }
     ?>
     <div class="alert alert-info">
@@ -74,7 +74,7 @@
         <button class="btn btn-success mb-3" type="submit" name="submit" value="submit">Simpan</button> <br>
         <?php
         $jml_data = count($input_absensi);
-        if ($jml_data > 0) { ?>
+        if($jml_data > 0) { ?>
             <table class="table table-bordered table-striped mt-2">
                 <tr>
                     <td class="text-center">No</td>
@@ -88,7 +88,7 @@
                 </tr>
 
                 <?php $no = 1;
-                foreach ($input_absensi as $a): ?>
+                foreach($input_absensi as $a): ?>
                     <tr>
                         <input type="hidden" name="bulan[]" class="form-control" value="<?php echo $bulantahun ?>">
                         <input type="hidden" name="nik[]" class="form-control" value="<?php echo $a->nik ?>">
@@ -112,9 +112,12 @@
                         <td>
                             <?php echo $a->nama_jabatan ?>
                         </td>
-                        <td><input type="number" name="hadir[]" class="form-control" max="26" required></td>
-                        <td><input type="number" name="sakit[]" class="form-control" value="0" max="26"></td>
-                        <td><input type="number" name="alpha[]" class="form-control" value="0" max="26"></td>
+                        <td><input type="number" name="hadir[]" class="form-control" max="26" required
+                                oninput="updateTotal(this)"></td>
+                        <td><input type="number" name="sakit[]" class="form-control" value="0" max="26"
+                                oninput="updateTotal(this)"></td>
+                        <td><input type="number" name="alpha[]" class="form-control" value="0" max="26"
+                                oninput="updateTotal(this)"></td>
                     </tr>
                 <?php endforeach; ?>
 
@@ -127,3 +130,23 @@
     <?php } ?>
 </div>
 </div>
+
+<script>
+    function updateTotal(element) {
+        // Dapatkan baris yang berisi elemen yang dipicu
+        var row = element.closest('tr');
+
+        // Ambil elemen-elemen input dalam baris tersebut
+        var hadirElement = row.querySelector('[name="hadir[]"]');
+        var sakitElement = row.querySelector('[name="sakit[]"]');
+        var alphaElement = row.querySelector('[name="alpha[]"]');
+
+        // Hitung total hadir, sakit, dan alpha
+        var total = parseInt(hadirElement.value || 0) + parseInt(sakitElement.value || 0) + parseInt(alphaElement.value || 0);
+
+        // Atur nilai maksimum input ke 26
+        hadirElement.max = total < 26 ? 26 : parseInt(hadirElement.value || 0);
+        sakitElement.max = total < 26 ? 26 : parseInt(sakitElement.value || 0);
+        alphaElement.max = total < 26 ? 26 : parseInt(alphaElement.value || 0);
+    }
+</script>

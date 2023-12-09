@@ -1,29 +1,26 @@
 <?php
 
-class DataAbsensi extends CI_Controller
-{
+class DataAbsensi extends CI_Controller {
 
-    public function __construct()
-    {
+    public function __construct() {
         parent::__construct();
-        if ($this->session->userdata('hak_akses') != '1') {
+        if($this->session->userdata('hak_akses') != '1') {
             $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-message" role="alert">
             <strong>Anda Belum Login !</strong> </div>');
             redirect('welcome');
         }
     }
-    public function index()
-    {
+    public function index() {
         $data['title'] = "Data Absensi Pegawai";
 
-        if ((isset($_GET['bulan']) && $_GET['bulan'] != '') && (isset($_GET['tahun']) && $_GET['tahun'] != '')) {
+        if((isset($_GET['bulan']) && $_GET['bulan'] != '') && (isset($_GET['tahun']) && $_GET['tahun'] != '')) {
             $bulan = $_GET['bulan'];
             $tahun = $_GET['tahun'];
-            $bulantahun = $bulan . $tahun;
+            $bulantahun = $bulan.$tahun;
         } else {
             $bulan = date('m');
             $tahun = date('Y');
-            $bulantahun = $bulan . $tahun;
+            $bulantahun = $bulan.$tahun;
         }
 
         $data['absensi'] = $this->db->query("SELECT data_kehadiran.*, data_pegawai.nama_pegawai, data_pegawai.jenis_kelamin, data_pegawai.jabatan
@@ -32,32 +29,31 @@ class DataAbsensi extends CI_Controller
         INNER JOIN data_jabatan ON data_pegawai.jabatan = data_jabatan.nama_jabatan
         WHERE data_kehadiran.bulan = $bulantahun
         ORDER BY data_pegawai.nama_pegawai ASC")->result();
-        
+
 
         $this->load->view('templates_admin/header', $data);
         $this->load->view('templates_admin/sidebar');
         $this->load->view('admin/dataAbsensi', $data);
         $this->load->view('templates_admin/footer');
 
-        
+
     }
 
-    public function inputAbsensi()
-    {
-        if ($this->input->post('submit', TRUE) == 'submit') {
+    public function inputAbsensi() {
+        if($this->input->post('submit', TRUE) == 'submit') {
             $post = $this->input->post();
 
-            foreach ($post['bulan'] as $key => $value) {
-                if ($post['bulan'][$key] != '' || $post['nik'][$key] != '') {
+            foreach($post['bulan'] as $key => $value) {
+                if($post['bulan'][$key] != '' || $post['nik'][$key] != '') {
                     $simpan[] = array(
-                        'bulan'              => $post['bulan'][$key],
-                        'nik'                => $post['nik'][$key],
-                        'nama_pegawai'       => $post['nama_pegawai'][$key],
-                        'jenis_kelamin'      => $post['jenis_kelamin'][$key],
-                        'nama_jabatan'       => $post['nama_jabatan'][$key],
-                        'hadir'              => $post['hadir'][$key],
-                        'sakit'              => $post['sakit'][$key],
-                        'alpha'              => $post['alpha'][$key],
+                        'bulan' => $post['bulan'][$key],
+                        'nik' => $post['nik'][$key],
+                        'nama_pegawai' => $post['nama_pegawai'][$key],
+                        'jenis_kelamin' => $post['jenis_kelamin'][$key],
+                        'nama_jabatan' => $post['nama_jabatan'][$key],
+                        'hadir' => $post['hadir'][$key],
+                        'sakit' => $post['sakit'][$key],
+                        'alpha' => $post['alpha'][$key],
                     );
                 }
             }
@@ -69,14 +65,14 @@ class DataAbsensi extends CI_Controller
 
         $data['title'] = "Form Input Absensi";
 
-        if ((isset($_GET['bulan']) && $_GET['bulan'] != '') && (isset($_GET['tahun']) && $_GET['tahun'] != '')) {
+        if((isset($_GET['bulan']) && $_GET['bulan'] != '') && (isset($_GET['tahun']) && $_GET['tahun'] != '')) {
             $bulan = $_GET['bulan'];
             $tahun = $_GET['tahun'];
-            $bulantahun = $bulan . $tahun;
+            $bulantahun = $bulan.$tahun;
         } else {
             $bulan = date('m');
             $tahun = date('Y');
-            $bulantahun = $bulan . $tahun;
+            $bulantahun = $bulan.$tahun;
         }
         $data['input_absensi'] = $this->db->query("SELECT data_pegawai.*, data_jabatan.nama_jabatan FROM data_pegawai
         INNER JOIN data_jabatan ON data_pegawai.jabatan=data_jabatan.nama_jabatan
