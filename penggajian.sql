@@ -79,16 +79,16 @@ INSERT INTO `data_kehadiran` (`id_kehadiran`, `bulan`, `nik`, `nama_pegawai`, `j
 (32, '122023', '3609900112234123', 'Grishan Peter', 'Laki-laki', 'Tour Guide', 23, 1, 2),
 (33, '122023', '3662261389213786', 'Neira Sasmita', 'Perempuan', 'Tour Leader', 25, 0, 1),
 (34, '122023', '3009412211332234', 'Nisa Arbani', 'Perempuan', 'Tour Consultant', 24, 0, 2),
-(35, '012024', '3310092287446576', 'Anna Mandella', 'Perempuan', 'Tour Consultant', 17, 1, 2),
-(36, '012024', '3224455006987568', 'Annie Lauren', 'Perempuan', 'Tour Consultant', 18, 0, 2),
-(37, '012024', '3112212334421123', 'Arji Manda', 'Laki-laki', 'Tour Guide', 18, 2, 0),
-(38, '012024', '3512345235746976', 'Bambang Ackerman', 'Laki-laki', 'Travel IT ', 20, 0, 0),
-(39, '012024', '3405782093890135', 'Edwardo Davinsi', 'Laki-laki', 'Admin', 19, 1, 0),
-(40, '012024', '3323344335546776', 'Excel Pratama Suratmajda', 'Laki-laki', 'Travel IT ', 19, 0, 1),
-(41, '012024', '3509988576432345', 'Fahmi Andrian', 'Laki-laki', 'Tour Leader', 18, 2, 0),
-(42, '012024', '3609900112234123', 'Grishan Peter', 'Laki-laki', 'Tour Guide', 20, 0, 0),
-(43, '012024', '3662261389213786', 'Neira Sasmita', 'Perempuan', 'Tour Leader', 17, 0, 3),
-(44, '012024', '3009412211332234', 'Nisa Arbani', 'Perempuan', 'Tour Consultant', 18, 0, 2);
+(35, '012024', '3310092287446576', 'Anna Mandella', 'Perempuan', 'Tour Consultant', 17, 6, 3),
+(36, '012024', '3224455006987568', 'Annie Lauren', 'Perempuan', 'Tour Consultant', 24, 1, 1),
+(37, '012024', '3112212334421123', 'Arji Manda', 'Laki-laki', 'Tour Guide', 20, 5, 1),
+(38, '012024', '3512345235746976', 'Bambang Ackerman', 'Laki-laki', 'Travel IT ', 26, 0, 0),
+(39, '012024', '3405782093890135', 'Edwardo Davinsi', 'Laki-laki', 'Admin', 24, 1, 1),
+(40, '012024', '3323344335546776', 'Excel Pratama Suratmajda', 'Laki-laki', 'Travel IT ', 23, 2, 1),
+(41, '012024', '3509988576432345', 'Fahmi Andrian', 'Laki-laki', 'Tour Leader', 20, 4, 2),
+(42, '012024', '3609900112234123', 'Grishan Peter', 'Laki-laki', 'Tour Guide', 23, 0, 3),
+(43, '012024', '3662261389213786', 'Neira Sasmita', 'Perempuan', 'Tour Leader', 25, 0, 1),
+(44, '012024', '3009412211332234', 'Nisa Arbani', 'Perempuan', 'Tour Consultant', 22, 3, 1);
 
 -- --------------------------------------------------------
 
