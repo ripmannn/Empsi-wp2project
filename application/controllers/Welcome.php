@@ -68,8 +68,8 @@ class Welcome extends CI_Controller
 
 	public function logout()
 	{
-
-		$this->session->sess_destroy();
+		// ini logout dan sesi berakhir
+		$this->session->sess_destroy(); 
 		redirect('landingPage');
 	}
 }
