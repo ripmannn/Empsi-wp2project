@@ -148,5 +148,10 @@
         hadirElement.max = total < 26 ? 26 : parseInt(hadirElement.value || 0);
         sakitElement.max = total < 26 ? 26 : parseInt(sakitElement.value || 0);
         alphaElement.max = total < 26 ? 26 : parseInt(alphaElement.value || 0);
+
+        if (total > 26) {
+            alert("Total kehadiran melebihi batas maksimum!");
+            // Tambahan tindakan jika kondisi "salah" terpenuhi
+        }
     }
 </script>
