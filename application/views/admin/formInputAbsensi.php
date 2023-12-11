@@ -71,7 +71,7 @@
     </div>
 
     <form method="POST">
-        <button class="btn btn-success mb-3" type="submit" name="submit" value="submit">Simpan</button> <br>
+        
         <?php
         $jml_data = count($input_absensi);
         if($jml_data > 0) { ?>
@@ -122,6 +122,7 @@
                 <?php endforeach; ?>
 
             </table>
+            <button class="btn btn-success mb-3" type="submit" name="submit" value="submit">Simpan</button> <br>
         </form>
     <?php } else { ?>
         <span class="badge badge-danger">
