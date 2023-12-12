@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 02, 2023 at 03:23 AM
+-- Generation Time: Dec 12, 2023 at 06:58 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -115,15 +115,15 @@ CREATE TABLE `data_pegawai` (
 --
 
 INSERT INTO `data_pegawai` (`id_pegawai`, `nik`, `nama_pegawai`, `username`, `password`, `jenis_kelamin`, `jabatan`, `tanggal_masuk`, `status`, `photo`, `hak_akses`) VALUES
-(12, '3112212334421123', 'Arji Manda', 'arji', '202cb962ac59075b964b07152d234b70', 'Laki-laki', 'Tour Guide', '2023-11-30', 'Pegawai Tetap', 'male-administrator.png', 2),
-(14, '3009412211332234', 'Nisa Arbani', 'nisa', '202cb962ac59075b964b07152d234b70', 'Perempuan', 'Tour Consultant', '2023-11-29', 'Pegawai Tetap', '-female-.png', 2),
+(12, '3112212334421123', 'Arji Manda', 'arji', '202cb962ac59075b964b07152d234b70', 'Laki-laki', 'Tour Guide', '2023-11-30', 'Pegawai Tetap', 'male-administrator1.png', 2),
+(14, '3009412211332234', 'Nisa Arbani', 'nisa', '202cb962ac59075b964b07152d234b70', 'Perempuan', 'Tour Consultant', '2023-11-29', 'Pegawai Tetap', '-female-2.png', 2),
 (18, '3405782093890135', 'Edwardo Davinsi', 'admin', '827ccb0eea8a706c4c34a16891f84e7b', 'Laki-laki', 'Admin', '2023-11-30', 'Pegawai Tetap', 'male-administrator1.png', 1),
 (19, '3323344335546776', 'Excel Pratama Suratmajda', 'excel', '202cb962ac59075b964b07152d234b70', 'Laki-laki', 'Travel IT ', '2023-11-29', 'Pegawai Tetap', 'male-administrator2.png', 2),
-(20, '3662261389213786', 'Neira Sasmita', 'neira', '202cb962ac59075b964b07152d234b70', 'Perempuan', 'Tour Leader', '2023-11-30', 'Pegawai Tetap', '-female-1.png', 2),
+(20, '3662261389213786', 'Neira Sasmita', 'neira', '202cb962ac59075b964b07152d234b70', 'Perempuan', 'Tour Leader', '2023-11-30', 'Pegawai Tetap', '-female-2.png', 2),
 (21, '3512345235746976', 'Bambang Ackerman', 'bambang', '202cb962ac59075b964b07152d234b70', 'Laki-laki', 'Travel IT ', '2023-11-30', 'Pegawai Tetap', 'male-administrator3.png', 2),
 (22, '3509988576432345', 'Fahmi Andrian', 'fahmi', '202cb962ac59075b964b07152d234b70', 'Laki-laki', 'Tour Leader', '2023-11-30', 'Pegawai Tetap', 'male-administrator4.png', 2),
 (23, '3310092287446576', 'Anna Mandella', 'anna', '202cb962ac59075b964b07152d234b70', 'Perempuan', 'Tour Consultant', '2023-11-30', 'Pegawai Tetap', '-female-3.png', 2),
-(24, '3224455006987568', 'Annie Lauren', 'annie', '202cb962ac59075b964b07152d234b70', 'Perempuan', 'Tour Consultant', '2023-11-30', 'Pegawai Tetap', '-female-4.png', 2),
+(24, '3224455006987568', 'Annie Lauren', 'annie', '202cb962ac59075b964b07152d234b70', 'Perempuan', 'Tour Consultant', '2023-11-30', 'Pegawai Tetap', '-female-2.png', 2),
 (25, '3609900112234123', 'Grishan Peter', 'grisha', '202cb962ac59075b964b07152d234b70', 'Laki-laki', 'Tour Guide', '2023-11-30', 'Pegawai Tetap', 'male-administrator5.png', 2);
 
 -- --------------------------------------------------------
@@ -163,7 +163,7 @@ CREATE TABLE `potongan_gaji` (
 --
 
 INSERT INTO `potongan_gaji` (`id`, `potongan`, `jml_potongan`) VALUES
-(0, 'Alpha', 100000);
+(1, 'alpha', 100000);
 
 --
 -- Indexes for dumped tables
@@ -194,6 +194,12 @@ ALTER TABLE `hak_akses`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `potongan_gaji`
+--
+ALTER TABLE `potongan_gaji`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -207,7 +213,7 @@ ALTER TABLE `data_jabatan`
 -- AUTO_INCREMENT for table `data_kehadiran`
 --
 ALTER TABLE `data_kehadiran`
-  MODIFY `id_kehadiran` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `id_kehadiran` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 
 --
 -- AUTO_INCREMENT for table `data_pegawai`
@@ -220,6 +226,12 @@ ALTER TABLE `data_pegawai`
 --
 ALTER TABLE `hak_akses`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `potongan_gaji`
+--
+ALTER TABLE `potongan_gaji`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
