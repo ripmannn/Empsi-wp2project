@@ -77,7 +77,7 @@
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" data-toggle="modal" data-target="#sidelogoutModal">
+                <a class="nav-link" data-toggle="modal" data-target="#sidelogoutModal" style="cursor: pointer;">
                     <i class="fas fa-fw fa-sign-out-alt"></i>
                     <span>Logout</span></a>
             </li>
