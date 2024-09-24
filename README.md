@@ -8,15 +8,20 @@ Aplikasi untuk membantu mengelola penggajian Anda menjadi lebih efisien tanpa ke
 -  Cetak Slip Gaji Karyawan
 -  Laporan Gaji Karyawan
 -  Data Absensi Karyawan
--  Settin Potongan Gaji
+-  Setting Potongan Gaji
+
+# Teknologi yang digunakan
+-  code igniter 3
+-  boostrap 5
+-  javascript
+
 
 # Kontributor
 
 - [@Ahmad Bintang](https://github.com/ahmadbintang74) 
 - [@Ahmad Nur Azriel](https://github.com/ahmadnurazril05) 
 - [@Sakinatul Ulfa](https://github.com/sakinatululfa) 
-- [@Sisca Lolita](https://github.com/SiscaLolitaAmalia) 
-
+- [@Sisca Lolita](https://github.com/SiscaLolitaAmalia)
 
 
 # Gambar
