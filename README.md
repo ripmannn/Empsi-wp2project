@@ -1,6 +1,6 @@
 # EMPSI(Employee Salary Information)
 
-Aplikasi untuk membantu mengelola penggajian Anda menjadi lebih efisien tanpa kerumitan menggunakan web
+Aplikasi untuk membantu mengelola penggajian Anda menjadi lebih efisien tanpa kerumitan menggunakan website
 
 # Fitur
 -  Login Karyawan
